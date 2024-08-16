@@ -1,14 +1,15 @@
 <template>
-  <div class="nav-wrapper" v-if="isAuthenticated">
+  <!-- <div class="nav-wrapper" v-if="isAuthenticated"> -->
+    <div class="nav-wrapper">
     <div
       class="flex items-center drop-shadow-custom bg-secondaryBlack p-2 rounded-[20px] hover:bg-gray-700 transition-colors duration-200 primaryStroke relative w-max"
     >
       <div class="relative flex items-center">
         <div
-          class="w-[60px] h-[60px] rounded-full overflow-hidden absolute left-2 top-1/2 transform -translate-y-1/2 z-10 border-2 border-white"
-        >
-          <img :src="profilePictureUrl" alt="User Profile" class="object-cover" />
-        </div>
+        class="w-[60px] h-[60px] rounded-full overflow-hidden absolute left-2 top-1/2 transform -translate-y-1/2 z-10 border-2 border-white"
+      >
+        <img src="@/assets/profile-icon.png" alt="User Profile" class="object-cover w-full h-full" />
+      </div>
       </div>
       <div class="ml-20">
         <span class="text-white font-semibold text-xl">{{ username }}</span>

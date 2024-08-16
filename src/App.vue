@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <TopBar />
+    <!-- <TopBar /> -->
     <router-view></router-view>
     <MainFooter />
   </div>

@@ -1,4 +1,5 @@
 <template>
+  <TopBar />
   <OnlineAndSocials />
   <OnlineAndSocials />
   <OnlineAndSocials />
@@ -19,6 +20,7 @@ import SendMessage from '../components/common/chat/SendMessage.vue'
 import Chat from '../components/common/Chat.vue'
 import MainLogo from '../components/common/MainLogo.vue'
 import UserProfile from '../components/common/Profile.vue'
+import TopBar from '../components/common/TopBar.vue'
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -29,7 +31,8 @@ export default {
     SendMessage,
     Chat,
     MainLogo,
-    UserProfile
+    UserProfile, 
+    TopBar
   }
 }
 </script>
