@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M30 0L30 0L30 30L0 30L0 0L30 0Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="online-icon">
+    <path d="M30 0L30 0L30 30L0 30L0 0L30 0Z" id="online-icon" fill="none" stroke="none" />
+    <path d="M25.8621 15C25.8621 20.999 20.999 25.8621 15 25.8621C9.00104 25.8621 4.13793 20.999 4.13793 15C4.13793 9.00105 9.00104 4.13793 15 4.13793C20.999 4.13793 25.8621 9.00105 25.8621 15L25.8621 15Z" id="Group" fill="#238E00" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M8.27586 15C8.27586 11.2864 11.2864 8.27586 15 8.27586C18.7136 8.27586 21.7241 11.2864 21.7241 15C21.7241 18.7136 18.7136 21.7241 15 21.7241C11.2864 21.7241 8.27586 18.7136 8.27586 15Z" id="Circle" fill="#2BAC00" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
+  </g>
+</svg>
