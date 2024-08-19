@@ -4,6 +4,9 @@ import Coinflip from '../views/Coinflip.vue'
 import Jackpot from '../views/Jackpot.vue'
 import NotFound from '../views/NotFound.vue'
 import Dashboard from '../views/Dashboard.vue'
+import Settings from '../views/Settings.vue'
+import Miscellaneous from '../views/Miscellaneous.vue'
+import Users from '../views/Users.vue'
 
 
 const router = createRouter({
@@ -28,6 +31,21 @@ const router = createRouter({
       path: '/dashboard',
       name: 'Dashboard',
       component: Dashboard
+    },
+    {
+      path: '/miscellaneous',
+      name: 'Miscellaneous',
+      component: Miscellaneous
+    },
+    {
+      path: '/users',
+      name: 'Users',
+      component: Users
+    },
+    {
+      path: '/settings',
+      name: 'Settings',
+      component: Settings
     },
     {
       path: '/404',

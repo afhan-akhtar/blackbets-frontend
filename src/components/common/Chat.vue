@@ -1,8 +1,30 @@
 <template>
-  <div class="container mx-auto bg-secondaryBlack primaryStroke p-2">
+  <button v-if="!isChatVisible"
+      @click="toggleChat"
+      class="flex items-center justify-center primaryBlack rounded-md hover:bg-gray-700 transition primaryStroke p-2"
+    >
+      <img src="@/assets/Line 80sidebar_toggle.svg" alt="Back" class="w-10 h-10" />
+    </button>
+    <!-- Chat Section -->
+    <div
+      :class="[
+        'transition-all duration-300 ease-in-out',
+        isChatVisible ? 'w-2/11' : 'w-0',
+        isChatVisible ? 'block' : 'hidden',
+        'bg-gray-800 text-white overflow-hidden'
+      ]"
+    >
+      <!-- <div  class="p-4">
+        <h2 class="text-xl font-semibold">Chat</h2>
+      
+      </div> -->
+    </div>
+  <div v-if="isChatVisible"  class="container mx-auto bg-secondaryBlack primaryStroke p-2">
+  
+
     <!-- Top Red Section with OnlineAndSocial Component -->
     <div class="bg-red-500 flex justify-center items-center px-2 py-4">
-      <OnlineAndSocials />
+      <OnlineAndSocials :toggleChat="toggleChat" />
     </div>
 
     <!-- Grey Divider Line -->
@@ -76,6 +98,16 @@ export default {
     OnlineAndSocials,
     ChatMessage,
     SendMessage
+  },
+  data() {
+    return {
+      isChatVisible: true
+    }
+  },
+  methods: {
+    toggleChat() {
+      this.isChatVisible = !this.isChatVisible
+    }
   }
 }
 </script>

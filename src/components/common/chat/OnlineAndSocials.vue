@@ -5,7 +5,7 @@
     >
       <div class="flex items-center space-x-2 px-2">
         <img src="@/assets/online-icon.svg" alt="Online Icon" class="w-6 h-6" />
-        <span class="text-white"> 304 Online </span>
+        <span class="text-white">304 Online</span>
       </div>
     </div>
     <button
@@ -19,19 +19,29 @@
       <img src="@/assets/twitter-icon.svg" alt="Twitter" class="w-10 h-10" />
     </button>
     <button
+      @click="toggleChat"
       class="flex items-center justify-center primaryBlack rounded-md hover:bg-gray-700 transition primaryStroke p-2"
     >
       <img src="@/assets/arrow-left.svg" alt="Back" class="w-10 h-10" />
     </button>
   </div>
+
+
 </template>
 
 <script>
 export default {
-  name: 'StatusBar'
+  name: 'OnlineAndSocials',
+  props: {
+    toggleChat: {
+      type: Function,
+      required: true
+    }
+  }
 }
 </script>
 
 <style scoped>
-/* Add any additional styling here if necessary */
+
 </style>
+

@@ -1,7 +1,7 @@
 <template>
   <div class="message flex items-start space-x-4 secondaryBlack py-4 rounded-lg mx-full primaryStroke">
     <!-- Use a static default avatar image -->
-    <img class="w-12 h-12 rounded-full ml-4" src="@/assets/profile-icon.png" alt="Avatar" />
+    <img class="w-12 h-12 rounded-full ml-4" src="@/assets/Rectangle 93chat.svg" alt="Avatar" />
     <div>
       <div class="flex items-center space-x-2">
         <span class="text-white font-semibold">{{ username }}</span>

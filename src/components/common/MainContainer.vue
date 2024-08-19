@@ -9,11 +9,11 @@
         'bg-gray-800 text-white overflow-hidden'
       ]"
     >
-      <div class="p-4">
-        <h2 class="text-xl font-semibold">Chat</h2>
-        <!-- Chat content goes here -->
+      <div class="p-6">
+        <!-- <h2 class="text-xl font-semibold">Chat</h2>
+        Chat content goes here -->
         <Chat />
-        <p class="mt-4">This is the chat section.</p>
+       
       </div>
     </div>
 
@@ -25,14 +25,17 @@
       ]"
       class="bg-gray-100 p-6"
     >
+    <!-- <button @click="toggleChat" class="mb-4 p-2 bg-blue-500 text-white rounded">
+      Toggle Chat
+    </button> -->
       <div>
         <!-- Main content goes here -->
         <!-- Main Card Section -->
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg mt-6 main-card" style="background-color: #171717; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);">
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg  main-card" style="background-color: #171717; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);">
           <div class="text-white text-center mb-4"></div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap">
             <!-- Card 1: User Management -->
-            <router-link to="/user-management" class="card-link">
+            <router-link to="/users" class="card-link">
               <div
                 class="flex items-center justify-center text-white rounded-lg card"
               >
