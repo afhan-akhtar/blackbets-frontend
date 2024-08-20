@@ -7,6 +7,10 @@ import Dashboard from '../views/Dashboard.vue'
 import Settings from '../views/Settings.vue'
 import Miscellaneous from '../views/Miscellaneous.vue'
 import Users from '../views/Users.vue'
+import Profile from '../views/Profile.vue'
+import ProvablyFair from '../views/ProvablyFair.vue'
+import Faqs from '../views/Faqs.vue'
+import TermsOfService from '../views/TermsOfService.vue'
 
 
 const router = createRouter({
@@ -42,6 +46,27 @@ const router = createRouter({
       name: 'Users',
       component: Users
     },
+    {
+      path: '/faq',
+      name: 'Faqs',
+      component: Faqs
+    },
+    {
+      path: '/terms',
+      name: 'TermsOfService',
+      component: TermsOfService
+    },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: Profile
+    },
+    {
+      path: '/provably-fair',
+      name: 'ProvablyFair',
+      component: ProvablyFair
+    },
+
     {
       path: '/settings',
       name: 'Settings',

@@ -10,7 +10,7 @@
           'bg-gray-800 text-white overflow-hidden'
         ]"
       >
-        <div class="p-6">
+        <div class="p-6" style="height:calc(100vh - 100px); overflow-y: auto">
           <Chat />
         </div>
       </div>
@@ -21,10 +21,10 @@
           'flex-grow transition-all duration-300 ease-in-out',
           isChatVisible ? 'w-9/11' : 'w-full'
         ]"
-        class="bg-gray-100 p-6"
+        class="bg-gray-100 p-6 " 
       >
         <!-- Main Container -->
-        <div class="bg-gray-800 p-8 rounded-lg shadow-md w-full text-white" style="background-color: #171717;">
+        <div class="bg-gray-800 p-8 rounded-lg shadow-md w-full text-white" style="background-color: #171717; border: 3px solid #222121; height:86vh; overflow-y: auto">
           <div class="w-1/3">
             <div class="space-y-4">
               <div class="flex justify-between items-center">

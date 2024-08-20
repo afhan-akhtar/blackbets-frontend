@@ -9,7 +9,7 @@
         'bg-gray-800 text-white overflow-hidden'
       ]"
     >
-      <div class="p-6">
+      <div class="p-6"  style="height:calc(100vh - 100px); overflow-y: auto">
         <!-- <h2 class="text-xl font-semibold">Chat</h2>
         Chat content goes here -->
         <Chat />
@@ -23,15 +23,15 @@
         'flex-grow transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-9/11' : 'w-full'
       ]"
-      class="bg-gray-100 p-6"
+      class="bg-gray-100 p-6 " style="height:calc(100vh - 100px); overflow-y: auto" 
     >
     <!-- <button @click="toggleChat" class="mb-4 p-2 bg-blue-500 text-white rounded">
       Toggle Chat
     </button> -->
-      <div>
+      <div >
         <!-- Main content goes here -->
         <!-- Main Card Section -->
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg  main-card" style="background-color: #171717; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);">
+        <div class="bg-gray-900 p-6 rounded-lg shadow-lg  main-card" style="background-color: #171717; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); border: 3px solid #222121; height:85vh; ">
           <div class="text-white text-center mb-4"></div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap">
             <!-- Card 1: User Management -->

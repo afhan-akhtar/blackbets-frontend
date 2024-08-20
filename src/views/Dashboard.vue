@@ -10,7 +10,7 @@
           'bg-gray-800 text-white overflow-hidden'
         ]"
       >
-        <div class="p-6">
+        <div class="p-6" style="height:calc(100vh - 100px); overflow-y: auto" >
           <!-- <h2 class="text-xl font-semibold">Chat</h2> -->
           <!-- Chat content goes here -->
           <Chat />
@@ -20,14 +20,14 @@
   
       <!-- Main Content Section -->
       <div
-        :class="[
-          'flex-grow transition-all duration-300 ease-in-out',
-          isChatVisible ? 'w-9/11' : 'w-full'
-        ]"
-        class="bg-gray-100 p-6" 
-      >
+      :class="[
+        'flex-grow transition-all duration-300 ease-in-out',
+        isChatVisible ? 'w-9/11' : 'w-full'
+      ]"
+      class="bg-gray-100 p-6 " style="height:calc(100vh - 40px); overflow-y: auto" 
+    >
         <div class="bg-gray-900 text-white py-0 px-6">
-          <div class="flex shadow rounded-lg main-card" style="background-color: #171717;">
+          <div class="flex shadow rounded-lg main-card" style="background-color: #171717; border: 3px solid #222121;">
             <!-- Left Column: Image -->
             <div class="w-1/3 p-4 flex justify-center items-center">
                 <div class="p-2 rounded-lg shadow-md" style="background-color: #222121;">
@@ -108,14 +108,14 @@
           <div class="flex">
             <!-- Left Column: Image -->
             <div class="py-4 ps-0 pe-6 block w-1/3">
-              <div class="rounded-lg shadow-md p-6 mb-3" style="background-color: #171717;">
+              <div class="rounded-lg shadow-md p-6 mb-3" style="background-color: #171717; border: 3px solid #222121;">
                 <h3 class="text-white font-semibold text-xl">Total profit: 
                   <span style="color: #4CC124;" class="text-xl">$245.43</span>
                 </h3>
               </div>
             
               <div class="pt-4">
-                <div class="rounded-lg shadow-md p-4" style="background-color: #171717;">
+                <div class="rounded-lg shadow-md p-4" style="background-color: #171717; border: 3px solid #222121;">
                   <!-- Label and Input with ID for Affiliate Code -->
                   <label for="affiliate-code" class="block text-lg font-medium text-gray-300 mb-2">
                     Redeem Affiliate Code:
@@ -161,7 +161,7 @@
             
       
             <!-- Right Column: Content with Transition -->
-            <div class="w-2/3 p-4 rounded-lg shadow right-card" style="background-color:#171717;">
+            <div class="w-2/3 p-4 rounded-lg shadow right-card" style="background-color:#171717; border: 3px solid #222121;">
               <div>
                 <h1 class="text-xl">Transactions:</h1>
               </div>

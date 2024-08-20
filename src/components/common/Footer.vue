@@ -27,19 +27,19 @@
           <h2 class="text-md font-bold">INFORMATION</h2>
           <ul>
             <li>
-              <a href="#" class="text-gray-600 text-sm">Provably Fair</a>
+              <router-link to="/provably-fair" class="text-gray-600 text-sm">Provably Fair</router-link>
             </li>
             <li>
-              <a href="#" class="text-gray-600 text-sm">FAQ</a>
+              <router-link to="/faq" class="text-gray-600 text-sm">FAQ</router-link>
             </li>
             <li>
-              <a href="#" class="text-gray-600 text-sm">Terms of Service</a>
+              <router-link to="/terms" class="text-gray-600 text-sm">Terms of Service</router-link>
             </li>
             <li>
-              <a href="#" class="text-gray-600 text-sm">Privacy Policy</a>
+               <router-link to="/privacy-policy" class="text-gray-600 text-sm">Privacy Policy</router-link>
             </li>
             <li>
-              <a href="#" class="text-gray-600 text-sm">Support</a>
+               <router-link to="/support" class="text-gray-600 text-sm">Support</router-link>
             </li>
           </ul>
         </div>
