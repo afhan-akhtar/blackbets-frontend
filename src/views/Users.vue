@@ -156,6 +156,26 @@
       cancelBan() {
         this.showBanModal = false;
       },
+      async makeTransaction() {
+      try {
+        // Prepare transaction data
+        const transactionData = {
+          amount: 100,  // Example transaction amount
+          userId: this.$store.state.user.id,
+        };
+
+        // Send transaction request to backend using axios
+        const response = await axios.post('https://your-backend-api/transaction', transactionData);
+
+        console.log('Transaction successful', response.data);
+
+        // Handle success (e.g., update UI, show confirmation message)
+      } catch (error) {
+        console.error('Error:', error.response ? error.response.data : error.message);
+        // Handle error (e.g., show error message to user)
+      }
+    },
+
     },
   };
   </script>

@@ -35,52 +35,52 @@
               
          
           <div class="records  grid grid-cols-3 gap-6 text-center">
-            <div class="card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121;">
+            <router-link to="/jackpot/deposit" class="card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121;">
            
               <h2 class="text-lg font-bold">Instant Jackpot</h2>
              
               <img src="@/assets/istockphoto-1360035898-612x612-removebg-preview 36biggest_jacpot.svg" alt="Jackpot" class=" mx-auto mb-4" />
             
-            </div>
-            <div class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121;">
+            </router-link>
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121;">
               
               <h2 class="text-lg font-bold">Hourly Jackpot</h2>
               <img src="@/assets/istockphoto-1360035898-612x612-removebg-preview 36biggest_jacpot.svg" alt="Jackpot" class=" mx-auto mb-4" />
 
               
-            </div>
-            <div class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121;">
+            </router-link>
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121;">
             
               <h2 class="text-lg font-bold">Daily jackpot</h2>
             
               <img src="@/assets/istockphoto-1360035898-612x612-removebg-preview 36biggest_jacpot.svg" alt="Jackpot" class=" mx-auto mb-4" />
              
-            </div>
+            </router-link>
           </div>
 
           <div class="records mt-6  grid grid-cols-3 gap-6 text-center">
-            <div class="card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); height: 285px; ">
+            <router-link to="/jackpot/deposit" class="card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); height: 285px; ">
            
               <h2 class="text-lg font-bold">Weekly Jackpot</h2>
              
               
             
-            </div>
-            <div class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); height: 285px;  ">
+            </router-link>
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); height: 285px;  ">
               
               <h2 class="text-lg font-bold">Biweekly Jackpot</h2>
              
            
 
               
-            </div>
-            <div class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); height: 285px;  ">
+            </router-link>
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); height: 285px;  ">
             
               <h2 class="text-lg font-bold">Monthly jackpot</h2>
             
               
              
-            </div>
+            </router-link>
           </div>
       </div>
         </div>
@@ -107,6 +107,27 @@ export default {
     toggleChat() {
       this.isChatVisible = !this.isChatVisible;
     },
+    async makeTransaction() {
+      try {
+        // Prepare transaction data
+        const transactionData = {
+          amount: 100,  // Example transaction amount
+          userId: this.$store.state.user.id,
+        };
+
+        // Send transaction request to backend using axios
+        const response = await axios.post('https://your-backend-api/transaction', transactionData);
+
+        console.log('Transaction successful', response.data);
+
+        // Handle success (e.g., update UI, show confirmation message)
+      } catch (error) {
+        console.error('Error:', error.response ? error.response.data : error.message);
+        // Handle error (e.g., show error message to user)
+      }
+    },
+
+
   },
 };
 </script>

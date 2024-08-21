@@ -5,19 +5,19 @@
   >
     <ul class="text-left primaryStroke rounded-lg">
       <!-- Align the icons to the left of the text while centering the text beneath the username -->
-      <li
-        class="flex items-center justify-center px-4 py-2 hover:bg-gray-700 cursor-pointer"
-        @click="navigateTo('profile')"
-      >
-        <div class="w-10 h-10 overflow-hidden mr-4">
-          <img
-            src="@/assets/profile-icon.svg"
-            alt="Profile Icon"
-            class="object-cover w-full h-full"
-          />
-        </div>
-        <span class="text-white">Profile</span>
+      <li class="flex items-center justify-center px-4 py-2 hover:bg-gray-700 cursor-pointer">
+        <router-link to="/profile" class="flex items-center w-full text-white no-underline">
+          <div class="w-10 h-10 overflow-hidden mr-4">
+            <img
+              src="@/assets/profile-icon.svg"
+              alt="Profile Icon"
+              class="object-cover w-full h-full"
+            />
+          </div>
+          <span>Profile</span>
+        </router-link>
       </li>
+      
       <li
         class="flex items-center justify-center px-4 py-2 hover:bg-gray-700 cursor-pointer"
         @click="navigateTo('affiliates')"

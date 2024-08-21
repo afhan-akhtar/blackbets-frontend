@@ -11,6 +11,9 @@ import Profile from '../views/Profile.vue'
 import ProvablyFair from '../views/ProvablyFair.vue'
 import Faqs from '../views/Faqs.vue'
 import TermsOfService from '../views/TermsOfService.vue'
+import JackpotDeposit from '../views/JackpotDeposit.vue'
+import JackpotHistory from '../views/JackpotHistory.vue'
+import JackpotInventory from '../views/JackpotInventory.vue'
 
 
 const router = createRouter({
@@ -50,6 +53,21 @@ const router = createRouter({
       path: '/faq',
       name: 'Faqs',
       component: Faqs
+    },
+    {
+      path: '/jackpot/deposit',
+      name: 'JackpotDeposit',
+      component: JackpotDeposit
+    },
+    {
+      path: '/jackpot/history',
+      name: 'JackpotHistory',
+      component: JackpotHistory
+    },
+    {
+      path: '/jackpot/inventory',
+      name: 'JackpotInventory',
+      component: JackpotInventory
     },
     {
       path: '/terms',

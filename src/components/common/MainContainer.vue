@@ -92,7 +92,33 @@ export default {
   methods: {
     toggleChat() {
       this.isChatVisible = !this.isChatVisible
-    }
+    },
+    async makeTransaction() {
+      try {
+        const response = await fetch('https://your-backend-api/transaction', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            amount: 100,  // Example transaction data
+            userId: this.$store.state.user.id,  
+          }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Transaction failed');
+        }
+
+        const result = await response.json();
+        console.log('Transaction successful', result);
+
+        // Handle success, update UI, etc.
+      } catch (error) {
+        console.error('Error:', error);
+        // Handle error, show error message, etc.
+      }
+    },
   }
 }
 </script>
