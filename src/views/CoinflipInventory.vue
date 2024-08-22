@@ -65,18 +65,40 @@
             </div>
             
          <!-- Deposit Button Section -->
-<div
-v-if="hasSelectedOnce" class="bottom-0 left-0 right-0 flex justify-center items-center p-4 bg-gray-800"
->
-<p class="text-white mr-8 text-lg">
-  {{ selectedItems.length > 0 ? selectedItems.length + ' item' + (selectedItems.length > 1 ? 's' : '') + ' selected' : '0 Items selected' }}
-</p>
-<button type="submit"  @click="handleTransaction"
-  class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-10 rounded" style="background-color: #9D9D9D;"
->
-  Deposit
-</button>
-</div>
+         <div
+         v-if="hasSelectedOnce" 
+         class="bottom-0 left-0 right-0 flex justify-around items-center p-4 bg-gray-800"
+       >
+         <p class="text-white mr-8 text-lg">
+           {{ selectedItems.length > 0 
+             ? selectedItems.length + ' item' + (selectedItems.length > 1 ? 's' : '') + ' selected' 
+             : '0 Items selected' 
+           }}
+         </p>
+         <button 
+           type="submit" 
+           @click="handleTransaction"
+           class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-10 rounded"
+           style="background-color: #9D9D9D;"
+         >
+           Deposit
+         </button>
+       
+         <div class="flex justify-center items-center">
+           <div v-if="selectedItems.length > 0" class="flex justify-center items-center">
+             <div>
+               <img src="@/assets/Bild_2024-07-31_143409522-removebg-preview 3.svg" alt="">
+             </div>
+             <div>
+               <img src="@/assets/Bild_2024-07-31_143430342-removebg-preview 3.svg" alt="">
+             </div>
+           </div>
+           <div v-else class="text-white text-lg">
+             $59.49 - 48.68 to join
+           </div>
+         </div>
+       </div>
+       
 
           </div>
   

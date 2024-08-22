@@ -35,38 +35,38 @@
               
          
           <div class="records  grid grid-cols-3 gap-6 text-center">
-            <router-link to="/jackpot/deposit" class="card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121;">
+            <router-link to="/jackpot/deposit" class="card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121;">
            
               <h2 class="text-lg font-bold">Instant Jackpot</h2>
              
               <img src="@/assets/istockphoto-1360035898-612x612-removebg-preview 36biggest_jacpot.svg" alt="Jackpot" class=" mx-auto mb-4" />
             
             </router-link>
-            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121;">
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121;">
               
               <h2 class="text-lg font-bold">Hourly Jackpot</h2>
-              <img src="@/assets/istockphoto-1360035898-612x612-removebg-preview 36biggest_jacpot.svg" alt="Jackpot" class=" mx-auto mb-4" />
+              <img src="@/assets/Group 6.svg" alt="Jackpot" class=" mx-auto mb-4" />
 
               
             </router-link>
-            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121;">
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121;">
             
               <h2 class="text-lg font-bold">Daily jackpot</h2>
             
-              <img src="@/assets/istockphoto-1360035898-612x612-removebg-preview 36biggest_jacpot.svg" alt="Jackpot" class=" mx-auto mb-4" />
+              <img src="@/assets/Group 7.svg" alt="Jackpot" class=" mx-auto mb-4" />
              
             </router-link>
           </div>
 
           <div class="records mt-6  grid grid-cols-3 gap-6 text-center">
-            <router-link to="/jackpot/deposit" class="card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); height: 285px; ">
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121; background-image: url('src/assets/Group 8.svg'); height: 347px;  ">
            
               <h2 class="text-lg font-bold">Weekly Jackpot</h2>
              
               
             
             </router-link>
-            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); height: 285px;  ">
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121; background-image: url('src/assets/Group 9.svg'); height: 347px;  ">
               
               <h2 class="text-lg font-bold">Biweekly Jackpot</h2>
              
@@ -74,7 +74,7 @@
 
               
             </router-link>
-            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); height: 285px;  ">
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121; background-image: url('src/assets/Group 10.svg'); height: 347px;  ">
             
               <h2 class="text-lg font-bold">Monthly jackpot</h2>
             

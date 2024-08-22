@@ -14,6 +14,10 @@ import TermsOfService from '../views/TermsOfService.vue'
 import JackpotDeposit from '../views/JackpotDeposit.vue'
 import JackpotHistory from '../views/JackpotHistory.vue'
 import JackpotInventory from '../views/JackpotInventory.vue'
+import ProfileSettings from '../views/ProfileSettings.vue'
+import ViewCoinflip from '../views/ViewCoinflip.vue'
+import CoinflipInventory from '../views/CoinflipInventory.vue'
+import Affiliate from '../views/Affiliate.vue'
 
 
 const router = createRouter({
@@ -28,6 +32,11 @@ const router = createRouter({
       path: '/coinflip',
       name: 'coinflip',
       component: Coinflip
+    },
+    {
+      path: '/affiliate',
+      name: 'Affiliate',
+      component: Affiliate
     },
     {
       path: '/jackpot',
@@ -80,6 +89,11 @@ const router = createRouter({
       component: Profile
     },
     {
+      path: '/coinflip/view',
+      name: 'ViewCoinflip',
+      component: ViewCoinflip
+    },
+    {
       path: '/provably-fair',
       name: 'ProvablyFair',
       component: ProvablyFair
@@ -89,6 +103,16 @@ const router = createRouter({
       path: '/settings',
       name: 'Settings',
       component: Settings
+    },
+    {
+      path: '/profile-settings',
+      name: 'ProfileSettings',
+      component: ProfileSettings
+    },
+    {
+      path: '/coinflip/inventory',
+      name: 'CoinflipInventory',
+      component: CoinflipInventory
     },
     {
       path: '/404',

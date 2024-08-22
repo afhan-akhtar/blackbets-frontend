@@ -26,15 +26,17 @@
         <div class="main-content text-center h-full overflow-y-auto">
           <!-- Circle with Timer -->
           <div class="relative inline-block flex justify-center items-center">
-            <div class="relative w-72 h-72 rounded-full bg-[#212020] flex justify-center items-center">
-              <!-- <div class="absolute inset-0 rounded-full bg-[#333232] opacity-50 border-4 border-dashed border-white"></div> -->
-              <div class="absolute inset-0 rounded-full  flex justify-center items-center shadow-xl" style="inset: 30px; background-color: #222121;">
-                <img src="@/assets/Group 11.svg" alt="Timer Background" class=" w-full h-full rounded-full" />
+            <div class="w-72 h-72 rounded-full bg-[#212020] flex justify-center items-center flex-col z-10">
+              <!-- Outer circle -->
+              <div class="w-60 h-60 rounded-full shadow-xl flex justify-center items-center" style="background-color: #222121;">
+                <img src="@/assets/Group 11.svg" alt="Timer Background" class="w-full h-full rounded-full" />
               </div>
-              <div class="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
+              <!-- Text Overlay -->
+              <div class="flex flex-col justify-center items-center text-center text-white absolute">
                 <p class="text-4xl font-bold mb-2">2m 0s</p>
               </div>
             </div>
+            
           </div>
   
           <!-- Value and Button Section -->

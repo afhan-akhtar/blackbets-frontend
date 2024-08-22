@@ -40,7 +40,7 @@
                 </router-link>
               
                 <!-- Jackpot Card -->
-                <router-link to="/jackpot" class="card-link jackpot-card flex items-center justify-center bg-cover bg-center text-white p-6 rounded-lg shadow-lg w-1/2 ml-6" style="background-image: url('src/assets/pngtree-gold-coin-rain-with-blank-background-png-image_5302322-removebg-preview 32jackpot_bg.svg'); background-color: #171717; border: 3px solid #222121;">
+                <router-link to="/jackpot" class="card-link jackpot-card flex items-center justify-center bg-cover bg-center text-white p-6 rounded-lg shadow-lg w-1/2 ml-6" style="background-image: url('src/assets/Group 5.svg'); background-color: #171717; border: 3px solid #222121;">
                   <h2 class="text-4xl font-bold text-center">Jackpot</h2>
                 </router-link>
               </div>
@@ -58,7 +58,7 @@
                   
                     <!-- Center Image Div -->
                     <div class="flex justify-center">
-                      <img src="@/assets/istockphoto-1360035898-612x612-removebg-preview 35jackpot_bg.svg" alt="Jackpot"  />
+                      <img src="@/assets/Group 1biggest_jacpot.svg" alt="Jackpot"  />
                     </div>
                   
                     <!-- Bottom Text Div -->
@@ -76,7 +76,7 @@
                   
                     <!-- Center Image Div -->
                     <div class="flex justify-center">
-                      <img src="@/assets/Bild_2024-08-04_005849995-removebg-preview (1) 2luckiest_jackpot.svg" alt="Lucky Clover"  />
+                      <img src="@/assets/Group 3.svg" alt="Lucky Clover"  />
                     </div>
                   
                     <!-- Bottom Text Div -->
@@ -94,7 +94,7 @@
                   
                     <!-- Center Image Div -->
                     <div class="flex justify-center">
-                      <img src="@/assets/coinflip-left.svg" alt="Coinflip"  />
+                      <img src="@/assets/Group 4.svg" alt="Coinflip"  />
                     </div>
                   
                     <!-- Bottom Text Div -->

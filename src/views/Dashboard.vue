@@ -108,11 +108,14 @@
           <div class="flex">
             <!-- Left Column: Image -->
             <div class="py-4 ps-0 pe-6 block w-1/3">
-              <div class="rounded-lg shadow-md p-6 mb-3" style="background-color: #171717; border: 3px solid #222121;">
-                <h3 class="text-white font-semibold text-xl">Total profit: 
-                  <span style="color: #4CC124;" class="text-xl">$245.43</span>
-                </h3>
-              </div>
+              <router-link to="/affiliate">
+                <div class="rounded-lg shadow-md p-6 mb-3" style="background-color: #171717; border: 3px solid #222121;">
+                  <h3 class="text-white font-semibold text-xl">Total profit: 
+                    <span style="color: #4CC124;" class="text-xl">$245.43</span>
+                  </h3>
+                </div>
+              </router-link>
+              
             
               <div class="pt-4">
                 <div class="rounded-lg shadow-md p-4" style="background-color: #171717; border: 3px solid #222121;">

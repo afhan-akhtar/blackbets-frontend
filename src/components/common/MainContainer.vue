@@ -1,4 +1,5 @@
 <template>
+  <LoginTopBar />
   <div class="flex h-screen">
     <!-- Chat Section -->
     <div
@@ -9,11 +10,8 @@
         'bg-gray-800 text-white overflow-hidden'
       ]"
     >
-      <div class="p-6"  style="height:calc(100vh - 100px); overflow-y: auto">
-        <!-- <h2 class="text-xl font-semibold">Chat</h2>
-        Chat content goes here -->
+      <div class="p-6" style="height: calc(100vh - 100px); overflow-y: auto;">
         <Chat />
-       
       </div>
     </div>
 
@@ -23,136 +21,167 @@
         'flex-grow transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-9/11' : 'w-full'
       ]"
-      class="bg-gray-100 p-6 " style="height:calc(100vh - 100px); overflow-y: auto" 
+      class="bg-black p-6" style="height: calc(100vh - 100px); overflow-y: auto;"
     >
-    <!-- <button @click="toggleChat" class="mb-4 p-2 bg-blue-500 text-white rounded">
-      Toggle Chat
-    </button> -->
-      <div >
-        <!-- Main content goes here -->
-        <!-- Main Card Section -->
-        <div class="bg-gray-900 p-6 rounded-lg shadow-lg  main-card" style="background-color: #171717; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); border: 3px solid #222121; height:85vh; ">
-          <div class="text-white text-center mb-4"></div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap">
-            <!-- Card 1: User Management -->
-            <router-link to="/users" class="card-link">
-              <div
-                class="flex items-center justify-center text-white rounded-lg card"
-              >
-                <h3 class="text-lg font-bold">User Management</h3>
-              </div>
-            </router-link>
-
-            <!-- Card 2: Dashboard -->
-            <router-link to="/dashboard" class="card-link">
-              <div
-                class="flex items-center justify-center text-white rounded-lg card"
-              >
-                <h3 class="text-lg font-bold">Dashboard</h3>
-              </div>
-            </router-link>
-
-            <!-- Card 3: Settings -->
-            <router-link to="/settings" class="card-link">
-              <div
-                class="flex items-center justify-center text-white rounded-lg card"
-              >
-                <h3 class="text-lg font-bold">Settings</h3>
-              </div>
-            </router-link>
-
-            <!-- Card 4: Miscellaneous -->
-            <router-link to="/miscellaneous" class="card-link">
-              <div
-                class="flex items-center justify-center text-white rounded-lg card"
-              >
-                <h3 class="text-lg font-bold">Miscellaneous</h3>
-              </div>
-            </router-link>
-          </div>
-        </div>
+      <!-- Header -->
+      <div class="flex justify-between items-center text-white mb-8">
+        <h1 class="text-lg ">Welcome Back, Zaqk187420</h1>
+   
       </div>
+
+      <div class="main-content mt-8" >
+          <!-- Top Banner -->
+          <div class="top-banner flex" style="height:230px;"> <!-- Container for both cards -->
+              <!-- Coinflips Card -->
+              <router-link to="/coinflip" class="card-link coinflips-card flex items-center justify-between text-white py-6 px-0 rounded-lg shadow-lg w-1/2" style="background-color: #171717; border: 3px solid #222121;">
+                <img src="@/assets/coinflip-left.svg" alt="Left Image">
+                <h2 class="text-4xl font-bold text-center flex-1 mx-4">Coinflips</h2>
+                <img src="@/assets/coinflip-right.svg" alt="Right Image">
+              </router-link>
+            
+              <!-- Jackpot Card -->
+              <router-link to="/jackpot" class="card-link jackpot-card flex items-center justify-center bg-cover bg-center text-white p-6 rounded-lg shadow-lg w-1/2 ml-6" style="background-image: url('src/assets/Group 5.svg'); background-color: #171717; border: 3px solid #222121;">
+                <h2 class="text-4xl font-bold text-center">Jackpot</h2>
+              </router-link>
+            </div>
+            
+           <div class="p-6 rounded-lg shadow-lg mt-6 text-white" style="background-color: #171717; border: 3px solid #222121;">
+              <h1 class="text-2xl">Records:</h1>
+          <!-- Records Section -->
+          <div class="records mt-2 grid grid-cols-3 gap-6 text-center">
+              <div class="card-link block record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; display: flex; flex-direction: column; justify-content: space-between;">
+                  <!-- Top Text Div -->
+                  <div class="text-top">
+                    <h2 class="text-lg font-bold">BIGGEST JACKPOT EVER</h2>
+                    <p class="text-sm">won by Zaqk187420</p>
+                  </div>
+                
+                  <!-- Center Image Div -->
+                  <div class="flex justify-center">
+                    <img src="@/assets/Group 1biggest_jacpot.svg" alt="Jackpot"  />
+                  </div>
+                
+                  <!-- Bottom Text Div -->
+                  <div class="text-bottom mt-auto">
+                    <p class="text-xl font-bold">$2568.64</p>
+                  </div>
+                </div>
+                
+                <div class="card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; display: flex; flex-direction: column; justify-content: space-between;">
+                  <!-- Top Text Div -->
+                  <div class="text-top">
+                    <h2 class="text-lg font-bold">LUCKIEST JACKPOT EVER</h2>
+                    <p class="text-sm">won by Zaqk187420</p>
+                  </div>
+                
+                  <!-- Center Image Div -->
+                  <div class="flex justify-center">
+                    <img src="@/assets/Group 3.svg" alt="Lucky Clover"  />
+                  </div>
+                
+                  <!-- Bottom Text Div -->
+                  <div class="text-bottom mt-auto">
+                    <p class="text-xl font-bold">$13.50</p>
+                  </div>
+                </div>
+                
+                <div class="card-link record-card bg-black p-6 rounded-lg text-white relative shadow-lg" style="background-color: #222121; display: flex; flex-direction: column; justify-content: space-between;">
+                  <!-- Top Text Div -->
+                  <div class="text-top">
+                    <h2 class="text-lg font-bold">BIGGEST COINFLIP EVER</h2>
+                    <p class="text-sm">won by Zaqk187420</p>
+                  </div>
+                
+                  <!-- Center Image Div -->
+                  <div class="flex justify-center">
+                    <img src="@/assets/Group 4.svg" alt="Coinflip"  />
+                  </div>
+                
+                  <!-- Bottom Text Div -->
+                  <div class="text-bottom mt-auto">
+                    <p class="text-xl font-bold">$5103.45</p>
+                  </div>
+                </div>
+                
+          </div>
+      </div>
+        </div>
     </div>
   </div>
 </template>
 
 
 <script>
-import Chat from './Chat.vue'
+import Chat from "./Chat.vue";
+import LoginTopBar from "./LoginTopBar.vue";
 
 export default {
   components: {
-    Chat
+    Chat,
+    LoginTopBar,
   },
   data() {
     return {
-      isChatVisible: true
-    }
+      isChatVisible: true,
+    };
   },
   methods: {
     toggleChat() {
-      this.isChatVisible = !this.isChatVisible
+      this.isChatVisible = !this.isChatVisible;
     },
     async makeTransaction() {
-      try {
-        const response = await fetch('https://your-backend-api/transaction', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            amount: 100,  // Example transaction data
-            userId: this.$store.state.user.id,  
-          }),
-        });
+    try {
+      // Prepare transaction data
+      const transactionData = {
+        amount: 100,  // Example transaction amount
+        userId: this.$store.state.user.id,
+      };
 
-        if (!response.ok) {
-          throw new Error('Transaction failed');
-        }
+      // Send transaction request to backend using axios
+      const response = await axios.post('https://your-backend-api/transaction', transactionData);
 
-        const result = await response.json();
-        console.log('Transaction successful', result);
+      console.log('Transaction successful', response.data);
 
-        // Handle success, update UI, etc.
-      } catch (error) {
-        console.error('Error:', error);
-        // Handle error, show error message, etc.
-      }
-    },
-  }
-}
+      // Handle success (e.g., update UI, show confirmation message)
+    } catch (error) {
+      console.error('Error:', error.response ? error.response.data : error.message);
+      // Handle error (e.g., show error message to user)
+    }
+  },
+
+  },
+};
 </script>
 
 <style scoped>
-.main-card {
-  padding-top: 20px;
-  padding-left: 110px;
-  padding-right: 110px;
-  padding-bottom: 30px;
-}
-
-.gap {
-  gap: 4rem;
-}
-
 .card {
-  background-color: #222221;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  height: 230px;
-  transition: opacity 0.3s ease-in-out;
+background-color: #171717;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+height: 150px;
+transition: opacity 0.3s ease-in-out;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+position: relative; /* For absolute positioning of images */
 }
 
-.card-link:hover .card {
+.card img {
+width: 64px; /* Width of the images */
+height: 64px; /* Height of the images */
+position: absolute;
+top: 8px;
+right: 8px;
+}
+
+
+.card-link:hover  {
   opacity: 0.8;
-}
-
-.card-link {
-  display: block;
-  transition: all 0.3s ease;
-}
-
-.card-link:hover {
   transform: scale(1.02);
 }
+
+
 </style>
+
 

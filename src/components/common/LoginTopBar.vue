@@ -23,29 +23,27 @@
 
         <!-- Notification Popup -->
         <div
-          v-if="isPopupVisible"
-          class="absolute right-0 top-full mt-2  main-container  bg-[#171717] text-white rounded-lg shadow-lg "  style="box-shadow: 0 4px 8px rgba(34, 33, 33, 0.5);"
-        >
-          <div class="p-4">
-            <div class="flex justify-end items-center mb-4">
-              <button @click="clearAllNotifications" class="text-sm text-white">
-                Clear all
-              </button>
-            </div>
-           
-             
-                <div v-if="notifications.length === 0" class="text-center text-gray-400">No new notifications.</div>
-                <div v-for="notification in notifications" :key="notification.id" class="flex flex-col mb-4 bg-[#222121] p-4 rounded-lg">
-                  <button @click="deleteNotification(notification.id)" class="text-sm text-white flex justify-end">
-                    <img src="@/assets/delete.svg" alt="">
-                  </button>
-                  <p v-html="notification.message"></p>
-                 
-                </div>
-              
-           
+        v-if="isPopupVisible"
+        class="absolute right-0 top-full mt-2 main-container bg-[#171717] text-white rounded-lg shadow-lg z-50"
+        style="box-shadow: 0 4px 8px rgba(34, 33, 33, 0.5);"
+      >
+        <div class="p-4">
+          <div class="flex justify-end items-center mb-4">
+            <button @click="clearAllNotifications" class="text-sm text-white">
+              Clear all
+            </button>
+          </div>
+      
+          <div v-if="notifications.length === 0" class="text-center text-gray-400">No new notifications.</div>
+          <div v-for="notification in notifications" :key="notification.id" class="flex flex-col mb-4 bg-[#222121] p-4 rounded-lg">
+            <button @click="deleteNotification(notification.id)" class="text-sm text-white flex justify-end">
+              <img src="@/assets/delete.svg" alt="">
+            </button>
+            <p v-html="notification.message"></p>
           </div>
         </div>
+      </div>
+      
       </div>
 
       <!-- UserProfile (Right) -->

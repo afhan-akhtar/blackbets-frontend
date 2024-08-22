@@ -1,5 +1,6 @@
 <template>
-  <TopBar />
+  <!-- <TopBar /> -->
+   
   <MainContainer>
     <OnlineAndSocials />
     <ChatMessage
@@ -22,7 +23,7 @@ import Chat from '../components/common/Chat.vue'
 import MainLogo from '../components/common/MainLogo.vue'
 import UserProfile from '../components/common/Profile.vue'
 import MainContainer from '../components/common/MainContainer.vue'
-import TopBar from '../components/common/TopBar.vue'
+// import TopBar from '../components/common/TopBar.vue'
 
 export default {
   name: 'HomeView',
@@ -34,7 +35,7 @@ export default {
     MainLogo,
     UserProfile,
     MainContainer,
-    TopBar
+    // TopBar
   }
 }
 </script>
