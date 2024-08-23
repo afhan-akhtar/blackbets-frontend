@@ -1,16 +1,16 @@
 <template>
   <LoginTopBar />
-  <div class="flex h-screen">
+  <div class="flex h-screen flex-col xl:flex-row">
     <!-- Chat Section -->
     <div
-      :class="[
-        'transition-all duration-300 ease-in-out',
-        isChatVisible ? 'w-2/11' : 'w-0',
-        isChatVisible ? 'block' : 'hidden',
-        'bg-gray-800 text-white overflow-hidden'
-      ]"
-    >
-      <div class="p-6" style="height: calc(100vh - 100px); overflow-y: auto;">
+    :class="[
+      'transition-all duration-300 ease-in-out',
+      isChatVisible ? 'w-2/11' : 'w-0',
+      isChatVisible ? 'block' : 'hidden',
+      'bg-gray-800 text-white overflow-hidden'
+    ]"
+  >
+      <div class="p-6 h-full overflow-y-auto">
         <Chat />
       </div>
     </div>
@@ -21,8 +21,11 @@
         'flex-grow transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-9/11' : 'w-full'
       ]"
-      class="bg-black p-6" style="height: calc(100vh - 100px); overflow-y: auto;"
+      class="bg-gray-100 p-6 h-full overflow-y-auto"
     >
+    <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
+      <img src="@/assets/arrow-left.svg" alt="">
+    </button>
     <header class="flex justify-between items-center mb-6 ">
       <h1 class="text-3xl font-bold text-white">Recent Flips</h1>
       
@@ -315,7 +318,10 @@ export default {
         return group13;
       }
       return group14;
-    }
+    },
+    goBack() {
+      this.$router.go(-1);
+    },
   },
 };
 </script>

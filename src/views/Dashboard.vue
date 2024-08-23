@@ -1,31 +1,31 @@
 <template>
     <LoginTopBar />
-    <div class="flex h-screen">
+    <div class="flex h-screen flex-col xl:flex-row">
       <!-- Chat Section -->
       <div
-        :class="[
-          'transition-all duration-300 ease-in-out',
-          isChatVisible ? 'w-2/11' : 'w-0',
-          isChatVisible ? 'block' : 'hidden',
-          'bg-gray-800 text-white overflow-hidden'
-        ]"
-      >
-        <div class="p-6" style="height:calc(100vh - 100px); overflow-y: auto" >
-          <!-- <h2 class="text-xl font-semibold">Chat</h2> -->
-          <!-- Chat content goes here -->
+      :class="[
+        'transition-all duration-300 ease-in-out',
+        isChatVisible ? 'w-2/11' : 'w-0',
+        isChatVisible ? 'block' : 'hidden',
+        'bg-gray-800 text-white overflow-hidden'
+      ]"
+    >
+        <div class="p-6 h-full overflow-y-auto">
           <Chat />
-          <!-- <p class="mt-4">This is the chat section.</p> -->
         </div>
       </div>
   
       <!-- Main Content Section -->
       <div
-      :class="[
-        'flex-grow transition-all duration-300 ease-in-out',
-        isChatVisible ? 'w-9/11' : 'w-full'
-      ]"
-      class="bg-gray-100 p-6 " style="height:calc(100vh - 40px); overflow-y: auto" 
-    >
+        :class="[
+          'flex-grow transition-all duration-300 ease-in-out',
+          isChatVisible ? 'w-9/11' : 'w-full'
+        ]"
+        class="bg-gray-100 p-6 h-full overflow-y-auto"
+      >
+    <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md mb-2">
+      <img src="@/assets/arrow-left.svg" alt="">
+    </button>
         <div class="bg-gray-900 text-white py-0 px-6">
           <div class="flex shadow rounded-lg main-card" style="background-color: #171717; border: 3px solid #222121;">
             <!-- Left Column: Image -->
@@ -130,14 +130,14 @@
                     class="text-white p-2 rounded-md w-full "
                     style="background-color: #171717; color: #ffffff; border: 1px solid #222121;"
                   >
-                  <div>
+                  <router-link to="/affiliate/withdraw">
                     <button type="button"
                       class="mt-4 p-2 w-full rounded-md shadow text-lg"
                       style="background-color: #222121; color: #ffffff;"
                     >
                       Redeem
                     </button>
-                  </div>
+                  </router-link>
             
                   <!-- Label and Input with ID for Promo Code -->
                   <label for="promo-code" class="block text-lg font-medium text-gray-300 mt-6 mb-2">
@@ -150,14 +150,14 @@
                     class="text-white p-2 rounded-md w-full shadow"
                     style="background-color: #171717; color: #ffffff; border: 1px solid #222121;"
                   >
-                  <div>
+                  <router-link to="/promo-code">
                     <button type="button"
                       class="mt-4 p-2 w-full rounded-md shadow text-lg"
                       style="background-color: #222121; color: #ffffff;"
                     >
                       Redeem
                     </button>
-                  </div>
+                  </router-link>
                 </div>
               </div>
             </div>
@@ -354,6 +354,10 @@
         // Handle error (e.g., show error message to user)
       }
     },
+    goBack() {
+      this.$router.go(-1);
+    },
+
 
     }
   }

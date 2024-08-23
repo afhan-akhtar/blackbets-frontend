@@ -7,7 +7,7 @@
           'transition-all duration-300 ease-in-out',
           isChatVisible ? 'w-2/11' : 'w-0',
           isChatVisible ? 'block' : 'hidden',
-          'bg-gray-800 text-white overflow-hidden'
+          'bg-gray-800 text-white '
         ]"
       >
         <div class="p-6" style="height:calc(100vh - 100px); overflow-y: auto" >
@@ -26,6 +26,9 @@
       ]"
       class="bg-gray-100 p-6 " style="height:calc(100vh - 40px); overflow-y: auto" 
     >
+    <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md ">
+      <img src="@/assets/arrow-left.svg" alt="">
+    </button>
      <!-- Header -->
      <div class="flex justify-between items-center text-white  px-6">
         <h1 class="text-2xl ">Your Affiliate Stats</h1>
@@ -112,9 +115,9 @@
                   <h3  class="block flex justify-center text-lg font-medium text-gray-300 mb-2">
                     Available Earnings
                   </h3>
-                  <p class="text-white flex justify-center p-2 rounded-md w-full "
+                  <p class="text-white flex justify-center p-2 rounded-md w-full text-xl "
                     style="background-color: #171717; color: #ffffff; "
-                  >5.32</p>
+                  >$5.32</p>
                   <div>
                     <button type="button"
                       class="mt-4 p-2 w-full rounded-md shadow text-lg"
@@ -165,7 +168,7 @@
                              
                             </tr>
                           </thead>
-                          <transition name="fade" mode="out-in">
+                        
                             <tbody :key="currentPage">
                               <tr class="hover:bg-gray-700 border-bottom" style="background-color: #222121; cursor:pointer; border-bottom: 10px solid #171717;">
                                 <td class="text-start p-2 text-lg flex items-center">
@@ -192,21 +195,11 @@
                               </tr>
                               
                             </tbody>
-                          </transition>
+                          
                         </table>
                       </div>
                     
-                      <footer class="mt-4 p-2 bg-gray-700 rounded-lg">
-                        <div class="flex justify-between items-center">
-                          <button @click="prevPage" :disabled="currentPage === 1" class="p-2 bg-gray-700 rounded-lg shadow" style="background-color:#222121">
-                            <img src="@/assets/_left.svg" alt="">
-                          </button>
-                          <span  style="background-color:#222121" class="p-2 bg-gray-700 rounded-lg shadow">{{ currentPage }} / {{ totalPages }}</span>
-                          <button @click="nextPage" :disabled="currentPage === totalPages" class="p-2 bg-gray-700 rounded-lg shadow" style="background-color:#222121">
-                            <img src="@/assets/_right.svg" alt="">
-                          </button>
-                        </div>
-                      </footer>
+                     
                     </div>
               
            
@@ -229,24 +222,14 @@
     data() {
       return {
         isChatVisible: true,
-        currentPage: 1,
-      totalPages: 26,
+       
       }
     },
     methods: {
       toggleChat() {
         this.isChatVisible = !this.isChatVisible
       },
-      nextPage() {
-      if (this.currentPage < this.totalPages) {
-        this.currentPage++;
-      }
-    },
-    prevPage() {
-      if (this.currentPage > 1) {
-        this.currentPage--;
-      }
-    },
+      
     async makeTransaction() {
       try {
         // Prepare transaction data
@@ -266,6 +249,10 @@
         // Handle error (e.g., show error message to user)
       }
     },
+    goBack() {
+      this.$router.go(-1);
+    },
+
 
     }
   }
@@ -283,12 +270,6 @@
     margin-bottom: 16px;
 }
 
-/* Fade Animation */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-  opacity: 0;
-}
+
   </style>
   

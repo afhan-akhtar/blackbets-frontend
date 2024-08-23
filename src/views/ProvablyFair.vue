@@ -23,6 +23,9 @@
       ]"
       class="bg-black p-6" style="height:calc(100vh - 100px); overflow-y:auto;"
     >
+    <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
+      <img src="@/assets/arrow-left.svg" alt="">
+    </button>
       <!-- Header -->
       <div class="flex justify-between items-center text-white mb-2">
         <h1 class="text-2xl">Provably Fair</h1>
@@ -78,6 +81,9 @@ export default {
         console.error('Error:', error.response ? error.response.data : error.message);
         // Handle error (e.g., show error message to user)
       }
+    },
+    goBack() {
+      this.$router.go(-1);
     },
 
   },

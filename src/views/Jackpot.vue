@@ -7,7 +7,7 @@
         'transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-2/11' : 'w-0',
         isChatVisible ? 'block' : 'hidden',
-        'bg-gray-800 text-white overflow-hidden'
+        'bg-gray-800 text-white '
       ]"
     >
       <div class="p-6" style="height: calc(100vh - 100px); overflow-y: auto;">
@@ -23,6 +23,9 @@
       ]"
       class="bg-black p-6" style="height: calc(100vh - 100px); overflow-y: auto;"
     >
+    <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
+      <img src="@/assets/arrow-left.svg" alt="">
+    </button>
       <!-- Header -->
       <div class="flex justify-between items-center text-white mb-2">
         <h1 class="text-2xl ">Our Jackpots</h1>
@@ -127,6 +130,9 @@ export default {
       }
     },
 
+    goBack() {
+      this.$router.go(-1);
+    },
 
   },
 };

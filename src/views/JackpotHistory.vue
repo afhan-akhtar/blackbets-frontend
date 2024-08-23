@@ -21,8 +21,14 @@
           'flex-grow transition-all duration-300 ease-in-out',
           isChatVisible ? 'w-9/11' : 'w-full'
         ]"
-        class="flex flex-col justify-center items-center overflow-hidden"
+        class="flex flex-col justify-center items-center overflow-hidden relative"
       >
+       <!-- Go Back Button -->
+       <div class="absolute top-3 left-0 p-4">
+        <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
+          <img src="@/assets/arrow-left.svg" alt="">
+        </button>
+      </div>
         <div class="main-content text-center h-full overflow-y-auto">
           <!-- Current Items Section -->
           <div class="py-6 px-0 rounded-xl shadow-xl bg-gray-900 border-gray-700" style="width: 800px; background-color: #222121;">
@@ -137,6 +143,9 @@
           this.transactionError = error.message;
         }
       },
+      goBack() {
+      this.$router.go(-1);
+    },
     },
     mounted() {
       // Uncomment this line to fetch transactions from the API when the component mounts

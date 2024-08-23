@@ -23,6 +23,9 @@
         ]"
         class="bg-black p-6" style="height: calc(100vh - 100px); overflow-y: auto;"
       >
+      <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
+        <img src="@/assets/arrow-left.svg" alt="">
+      </button>
         <!-- Header -->
         <div class="flex justify-between items-center text-white mb-8">
           <h1 class="text-lg ">Welcome Back, Zaqk187420</h1>
@@ -31,19 +34,19 @@
   
         <div class="main-content mt-8" >
             <!-- Top Banner -->
-            <div class="top-banner flex" style="height:230px;"> <!-- Container for both cards -->
-                <!-- Coinflips Card -->
-                <router-link to="/coinflip" class="card-link coinflips-card flex items-center justify-between text-white py-6 px-0 rounded-lg shadow-lg w-1/2" style="background-color: #171717; border: 3px solid #222121;">
-                  <img src="@/assets/coinflip-left.svg" alt="Left Image">
-                  <h2 class="text-4xl font-bold text-center flex-1 mx-4">Coinflips</h2>
-                  <img src="@/assets/coinflip-right.svg" alt="Right Image">
-                </router-link>
-              
-                <!-- Jackpot Card -->
-                <router-link to="/jackpot" class="card-link jackpot-card flex items-center justify-center bg-cover bg-center text-white p-6 rounded-lg shadow-lg w-1/2 ml-6" style="background-image: url('src/assets/Group 5.svg'); background-color: #171717; border: 3px solid #222121;">
-                  <h2 class="text-4xl font-bold text-center">Jackpot</h2>
-                </router-link>
-              </div>
+            <div class="top-banner flex" style="height:230px;">
+              <!-- Coinflips Card -->
+              <router-link to="/coinflip" class="card-link coinflips-card flex items-center justify-between text-white py-6 px-0 rounded-lg shadow-lg w-1/2" style="background-color: #171717; border: 3px solid #222121; height:223px;">
+                <img src="@/assets/coinflip-left.svg" alt="Left Image">
+                <h2 class="text-4xl font-bold text-center flex-1 mx-4">Coinflips</h2>
+                <img src="@/assets/coinflip-right.svg" alt="Right Image">
+              </router-link>
+            
+              <!-- Jackpot Card -->
+              <router-link to="/jackpot" class="card-link jackpot-card flex items-center justify-center  bg-top text-white p-6 rounded-lg shadow-lg w-1/2 ml-6" style="background-image: url('src/assets/Group 5.svg'); background-color: #171717; border: 3px solid #222121; height:223px;">
+                <h2 class="text-4xl font-bold text-center">Jackpot</h2>
+              </router-link>
+            </div>
               
              <div class="p-6 rounded-lg shadow-lg mt-6 text-white" style="background-color: #171717; border: 3px solid #222121;">
                 <h1 class="text-2xl">Records:</h1>
@@ -147,6 +150,9 @@
         console.error('Error:', error.response ? error.response.data : error.message);
         // Handle error (e.g., show error message to user)
       }
+    },
+    goBack() {
+      this.$router.go(-1);
     },
 
     },

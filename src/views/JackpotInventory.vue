@@ -21,8 +21,14 @@
           'flex-grow transition-all duration-300 ease-in-out',
           isChatVisible ? 'w-9/11' : 'w-full'
         ]"
-        class="flex flex-col justify-center items-center overflow-hidden"
+        class="flex flex-col justify-center items-center overflow-hidden relative"
       >
+       <!-- Go Back Button -->
+       <div class="absolute top-3 left-0 p-4">
+        <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
+          <img src="@/assets/arrow-left.svg" alt="">
+        </button>
+      </div>
         <div class="main-content text-center h-full overflow-y-auto">
           <!-- Current Items Section -->
           <div
@@ -144,6 +150,9 @@ v-if="hasSelectedOnce" class="bottom-0 left-0 right-0 flex justify-center items-
       alert('Transaction failed, please try again.');
     }
   },
+  goBack() {
+      this.$router.go(-1);
+    },
     },
   };
   </script>

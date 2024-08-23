@@ -1,16 +1,16 @@
 <template>
     <LoginTopBar />
-    <div class="flex h-screen">
+    <div class="flex h-screen flex-col xl:flex-row">
       <!-- Chat Section -->
       <div
-        :class="[
-          'transition-all duration-300 ease-in-out',
-          isChatVisible ? 'w-2/11' : 'w-0',
-          isChatVisible ? 'block' : 'hidden',
-          'bg-gray-800 text-white overflow-hidden'
-        ]"
-      >
-        <div class="p-6" style="height: calc(100vh - 100px); overflow-y: auto;">
+      :class="[
+        'transition-all duration-300 ease-in-out',
+        isChatVisible ? 'w-2/11' : 'w-0',
+        isChatVisible ? 'block' : 'hidden',
+        'bg-gray-800 text-white overflow-hidden'
+      ]"
+    >
+        <div class="p-6 h-full overflow-y-auto">
           <Chat />
         </div>
       </div>
@@ -21,9 +21,11 @@
           'flex-grow transition-all duration-300 ease-in-out',
           isChatVisible ? 'w-9/11' : 'w-full'
         ]"
-        class="bg-black p-6"
-        style="height: calc(100vh - 100px); overflow-y: auto;"
+        class="bg-gray-100 p-6 h-full overflow-y-auto"
       >
+      <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md mb-2">
+        <img src="@/assets/arrow-left.svg" alt="">
+      </button>
         <div class="main-content px-4 bg-[#222121] rounded-xl card shadow-xl">
           <div class="flex justify-around items-center pt-8">
             <div v-for="(user, index) in users" :key="index">
@@ -167,6 +169,9 @@
       } catch (error) {
         console.error("Error:", error.message);
       }
+    },
+    goBack() {
+      this.$router.go(-1);
     },
   },
 };

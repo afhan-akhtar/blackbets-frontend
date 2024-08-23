@@ -18,6 +18,9 @@ import ProfileSettings from '../views/ProfileSettings.vue'
 import ViewCoinflip from '../views/ViewCoinflip.vue'
 import CoinflipInventory from '../views/CoinflipInventory.vue'
 import Affiliate from '../views/Affiliate.vue'
+import AffiliateWithdraw from '../views/AffiliateWithdraw.vue'
+import PromoCode from '../views/PromoCode.vue'
+import Maintenance from '../views/Maintenance.vue'
 
 
 const router = createRouter({
@@ -105,6 +108,11 @@ const router = createRouter({
       component: Settings
     },
     {
+      path: '/promo-code',
+      name: 'PromoCode',
+      component: PromoCode
+    },
+    {
       path: '/profile-settings',
       name: 'ProfileSettings',
       component: ProfileSettings
@@ -113,6 +121,16 @@ const router = createRouter({
       path: '/coinflip/inventory',
       name: 'CoinflipInventory',
       component: CoinflipInventory
+    },
+    {
+      path: '/affiliate/withdraw',
+      name: 'AffiliateWithdraw',
+      component: AffiliateWithdraw
+    },
+    {
+      path: '/maintenance',
+      name: 'Maintenance',
+      component: Maintenance
     },
     {
       path: '/404',

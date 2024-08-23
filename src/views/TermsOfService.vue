@@ -23,6 +23,9 @@
         ]"
         class="bg-black p-6" style="height:calc(100vh - 80px); overflow-y:auto;"
       >
+      <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
+        <img src="@/assets/arrow-left.svg" alt="">
+      </button>
         <!-- Header -->
         <div class="flex justify-between items-center text-white mb-2">
           <h1 class="text-2xl">Terms of Service</h1>
@@ -127,6 +130,10 @@
       toggleChat() {
         this.isChatVisible = !this.isChatVisible;
       },
+      goBack() {
+      this.$router.go(-1);
+    },
+
     },
   };
   </script>
