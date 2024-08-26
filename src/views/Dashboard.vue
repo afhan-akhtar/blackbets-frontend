@@ -1,16 +1,16 @@
 <template>
     <LoginTopBar />
-    <div class="flex h-screen flex-col xl:flex-row">
+    <div class="flex min-h-screen flex-col xl:flex-row">
       <!-- Chat Section -->
       <div
       :class="[
         'transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-2/11' : 'w-0',
         isChatVisible ? 'block' : 'hidden',
-        'bg-gray-800 text-white overflow-hidden'
+        'bg-gray-800 text-white'
       ]"
     >
-        <div class="p-6 h-full overflow-y-auto">
+        <div class="p-6 h-full ">
           <Chat />
         </div>
       </div>
@@ -21,7 +21,7 @@
           'flex-grow transition-all duration-300 ease-in-out',
           isChatVisible ? 'w-9/11' : 'w-full'
         ]"
-        class="bg-gray-100 p-6 h-full overflow-y-auto"
+        class="bg-gray-100 p-6 h-full "
       >
     <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md mb-2">
       <img src="@/assets/arrow-left.svg" alt="">
@@ -162,142 +162,9 @@
               </div>
             </div>
             
-      
-            <!-- Right Column: Content with Transition -->
             <div class="w-2/3 p-4 rounded-lg shadow right-card" style="background-color:#171717; border: 3px solid #222121;">
-              <div>
-                <h1 class="text-xl">Transactions:</h1>
-              </div>
-              
-              <!-- Add Transition -->
-              <transition name="fade" mode="out-in">
-                <div class="w-full p-4 rounded-lg shadow right-card" style="background-color:#222121;" :key="currentPage">
-                  <!-- Content Sections Below Each Heading -->
-                    <!-- Headings Row with Single HR -->
-                <div class="flex flex-col md:flex-row items-center justify-between">
-                  <div class="flex-1  p-2">
-                    <h3 class="text-xl font-semibold">Gamemode</h3>
-                  </div>
-                  <div class="flex-1  p-2">
-                    <h3 class="text-xl font-semibold">Amount</h3>
-                  </div>
-                  <div class="flex-1  p-2">
-                    <h3 class="text-xl font-semibold">Trade Status</h3>
-                  </div>
-                  <div class="flex-1  p-2">
-                    <h3 class="text-xl font-semibold">Win/Loss</h3>
-                  </div>
-                </div>
-                <hr />
-                  <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                    <!-- Gamemode Section -->
-                    <div class="bg-gray-800 p-4 rounded-lg">
-                      <div class="mt-4">
-                        <div class="flex justify-between">
-                          <span class="font-semibold text-lg">Coinflip</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="font-semibold text-lg">Coinflip</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="font-semibold text-lg">Jackpot</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="font-semibold text-lg">Coinflip</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="font-semibold text-lg">Coinflip</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="font-semibold text-lg">Jackpot</span>
-                        </div>
-                      </div>
-                    </div>
-      
-                    <!-- Amount Section -->
-                    <div class="bg-gray-800 p-4 rounded-lg">
-                      <div class="mt-4">
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">$22.43</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">$11.32</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">$5.21</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">$22.43</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">$16.32</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">$5.21</span>
-                        </div>
-                      </div>
-                    </div>
-      
-                    <!-- Trade Status Section -->
-                    <div class="bg-gray-800 p-4 rounded-lg">
-                      <div class="mt-4">
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">Resend Trade</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">Success</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">Success</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">Success</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">Success</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg">Success</span>
-                        </div>
-                      </div>
-                    </div>
-      
-                    <!-- Win/Loss Section -->
-                    <div class="bg-gray-800 p-4 rounded-lg">
-                      <div class="mt-4">
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg" style="color: #4CC124;">Win</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg" style="color: #EF4242;">Loss</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg" style="color: #EF4242;">Loss</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg" style="color: #EF4242;">Loss</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg" style="color: #4CC124;">Win</span>
-                        </div>
-                        <div class="flex justify-between">
-                          <span class="text-gray-300 text-lg" style="color: #EF4242;">Loss</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </transition>
-      
-              <div class="mt-4 flex justify-between items-center">
-                <button @click="prevPage" :disabled="currentPage === 1" class="p-2 bg-gray-700 rounded-lg shadow" style="background-color:#222121">
-                  <img src="@/assets/_left.svg" alt="">
-                </button>
-                <span style="background-color:#222121" class="p-2 bg-gray-700 rounded-lg shadow" >{{ currentPage }} / {{ totalPages }}</span>
-                <button @click="nextPage" :disabled="currentPage === totalPages" class="p-2 bg-gray-700 rounded-lg shadow " style="background-color:#222121">
-                  <img src="@/assets/_right.svg" alt="">
-                </button>
-              </div>
+            <!-- Right Column: Content with Transition -->
+            <Transactions :transactions="transactions" :currentPage="currentPage" :totalPages="totalPages" @nextPage="nextPage" @prevPage="prevPage" />
             </div>
           </div>
         </div>
@@ -308,17 +175,28 @@
   <script>
   import Chat from '../components/common/Chat.vue'
   import LoginTopBar from '../components/common/LoginTopBar.vue'
+  import Transactions from '../components/common/Transactions.vue'
   
   export default {
     components: {
       Chat,
-      LoginTopBar
+      LoginTopBar, 
+      Transactions
     },
     data() {
       return {
         isChatVisible: true,
         currentPage: 1,
       totalPages: 26,
+      transactions: [
+          { gamemode: 'Coinflip', amount: '$22.43', status: 'Resend Trade', winLoss: 'Win' },
+          { gamemode: 'Coinflip', amount: '$11.32', status: 'Success', winLoss: 'Loss' },
+          { gamemode: 'Jackpot', amount: '$5.21', status: 'Success', winLoss: 'Loss' },
+          { gamemode: 'Coinflip', amount: '$22.43', status: 'Success', winLoss: 'Loss' },
+          { gamemode: 'Coinflip', amount: '$16.32', status: 'Success', winLoss: 'Win' },
+          { gamemode: 'Jackpot', amount: '$5.21', status: 'Success', winLoss: 'Loss' }
+          // More transactions...
+        ],
       }
     },
     methods: {

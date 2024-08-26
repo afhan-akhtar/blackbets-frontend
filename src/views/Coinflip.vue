@@ -1,16 +1,16 @@
 <template>
   <LoginTopBar />
-  <div class="flex h-screen flex-col xl:flex-row">
+  <div class="flex min-h-screen flex-col xl:flex-row">
     <!-- Chat Section -->
     <div
     :class="[
       'transition-all duration-300 ease-in-out',
       isChatVisible ? 'w-2/11' : 'w-0',
       isChatVisible ? 'block' : 'hidden',
-      'bg-gray-800 text-white overflow-hidden'
+      'bg-gray-800 text-white'
     ]"
   >
-      <div class="p-6 h-full overflow-y-auto">
+      <div class="p-6 h-full ">
         <Chat />
       </div>
     </div>
@@ -21,7 +21,7 @@
         'flex-grow transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-9/11' : 'w-full'
       ]"
-      class="bg-gray-100 p-6 h-full overflow-y-auto"
+      class="bg-gray-100 p-6 h-full"
     >
     <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
       <img src="@/assets/arrow-left.svg" alt="">
@@ -115,7 +115,7 @@
               style="border: 1px solid #222121;"
             >
               <p class="price text-xl text-white text-center">$15.53</p>
-              <div class="item-icons flex justify-between" style="width:240px; height:92px;">
+              <div class="item-icons flex justify-between" style="height:92px;">
                 <div>
                   <img src="@/assets/Group 13.svg" alt="Item 1" class="item-img">
                 </div>
@@ -138,7 +138,7 @@
                 <img src="@/assets/50fx50f 42.svg" alt="Image 1" class="w-8 h-8">
                 <img src="@/assets/50fx50f (1) 39.svg" alt="Image 2" class="w-8 h-8">
                 <img src="@/assets/50fx50f (1) 39.svg" alt="Image 2" class="w-8 h-8">
-                <p class="text-white text-lg">+15 Items</p>
+                <p class="text-white text-lg" style="font-size:14px;">+15 Items</p>
               </div>
               
               <div class="card-buttons flex justify-between">
@@ -166,7 +166,7 @@
                   style="border: 1px solid #222121;"
                 >
                   <p class="price text-xl text-white text-center">$15.53</p>
-                  <div class="item-icons flex justify-between" style="width:240px; height:92px;">
+                  <div class="item-icons flex justify-between" style="height:92px;">
                     <div>
                       <img src="@/assets/Group 13.svg" alt="Item 1" class="item-img">
                     </div>
@@ -194,7 +194,7 @@
                     <img src="@/assets/50fx50f 42.svg" alt="Image 1" class="w-8 h-8">
                     <img src="@/assets/50fx50f (1) 39.svg" alt="Image 2" class="w-8 h-8">
                     <img src="@/assets/50fx50f (1) 39.svg" alt="Image 2" class="w-8 h-8">
-                    <p class="text-white text-lg">+15 Items</p>
+                    <p class="text-white text-lg" style="font-size:14px;">+15 Items</p>
                   </div>
                   
                   <div class="card-buttons flex justify-center">
@@ -219,7 +219,7 @@
       style="border: 1px solid #222121;"
     >
       <p class="price text-xl text-white text-center">$15.53</p>
-      <div class="item-icons flex justify-center" style="width:240px; height:92px;">
+      <div class="item-icons flex justify-center" style="height:92px;">
         <div class="ml-4">
           <img 
             :src="getImageSrc(index)" 
@@ -240,7 +240,7 @@
         <img src="@/assets/50fx50f 42.svg" alt="Image 1" class="w-8 h-8">
         <img src="@/assets/50fx50f (1) 39.svg" alt="Image 2" class="w-8 h-8">
         <img src="@/assets/50fx50f (1) 39.svg" alt="Image 2" class="w-8 h-8">
-        <p class="text-white text-lg">+15 Items</p>
+        <p class="text-white text-lg" style="font-size:14px;">+15 Items</p>
       </div>
       
       <div class="card-buttons flex justify-center">

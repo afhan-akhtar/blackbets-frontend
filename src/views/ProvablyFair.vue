@@ -1,16 +1,16 @@
 <template>
   <LoginTopBar />
-  <div class="flex h-screen">
+  <div class="flex min-h-screen">
     <!-- Chat Section -->
     <div
       :class="[
         'transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-2/11' : 'w-0',
         isChatVisible ? 'block' : 'hidden',
-        'bg-gray-800 text-white overflow-hidden'
+        'bg-gray-800 text-white'
       ]"
     >
-      <div class="p-6" style="height:calc(100vh - 100px); overflow-y:auto;">
+      <div class="p-6" >
         <Chat />
       </div>
     </div>
@@ -21,7 +21,7 @@
         'flex-grow transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-9/11' : 'w-full'
       ]"
-      class="bg-black p-6" style="height:calc(100vh - 100px); overflow-y:auto;"
+      class="bg-black p-6" 
     >
     <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
       <img src="@/assets/arrow-left.svg" alt="">

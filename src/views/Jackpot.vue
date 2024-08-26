@@ -1,6 +1,6 @@
 <template>
   <LoginTopBar />
-  <div class="flex h-screen">
+  <div class="flex min-h-screen">
     <!-- Chat Section -->
     <div
       :class="[
@@ -10,7 +10,7 @@
         'bg-gray-800 text-white '
       ]"
     >
-      <div class="p-6" style="height: calc(100vh - 100px); overflow-y: auto;">
+      <div class="p-6" >
         <Chat />
       </div>
     </div>
@@ -21,7 +21,7 @@
         'flex-grow transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-9/11' : 'w-full'
       ]"
-      class="bg-black p-6" style="height: calc(100vh - 100px); overflow-y: auto;"
+      class="bg-black p-6" 
     >
     <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
       <img src="@/assets/arrow-left.svg" alt="">
@@ -34,7 +34,7 @@
 
       <div class="main-content">
         
-           <div class="p-6 rounded-lg shadow-lg  text-white" style="background-color: #171717; border: 3px solid #222121;">
+           <div class="p-6 rounded-lg shadow-lg  text-white" style="background-color: #171717; border: 3px solid #222121; height: 800px;">
               
          
           <div class="records  grid grid-cols-3 gap-6 text-center">
@@ -42,13 +42,13 @@
            
               <h2 class="text-lg font-bold">Instant Jackpot</h2>
              
-              <img src="@/assets/istockphoto-1360035898-612x612-removebg-preview 36biggest_jacpot.svg" alt="Jackpot" class=" mx-auto mb-4" />
+              <img style="background-repeat: no-repeat;" src="@/assets/istockphoto-1360035898-612x612-removebg-preview 36biggest_jacpot.svg" alt="Jackpot" class=" mx-auto mb-4" />
             
             </router-link>
             <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121;">
               
               <h2 class="text-lg font-bold">Hourly Jackpot</h2>
-              <img src="@/assets/Group 6.svg" alt="Jackpot" class=" mx-auto mb-4" />
+              <img style="background-repeat: no-repeat;" src="@/assets/Group 6.svg" alt="Jackpot" class=" mx-auto mb-4" />
 
               
             </router-link>
@@ -62,14 +62,16 @@
           </div>
 
           <div class="records mt-6  grid grid-cols-3 gap-6 text-center">
-            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121; background-image: url('src/assets/Group 8.svg'); height: 347px;  ">
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121; background-image: url('src/assets/Group 8.svg'); height: 347px; background-repeat: no-repeat;     background-size: cover;
+    background-position: center;  ">
            
               <h2 class="text-lg font-bold">Weekly Jackpot</h2>
              
               
             
             </router-link>
-            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121; background-image: url('src/assets/Group 9.svg'); height: 347px;  ">
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121; background-image: url('src/assets/Group 9.svg'); height: 347px; background-repeat: no-repeat;     background-size: cover;
+    background-position: center; ">
               
               <h2 class="text-lg font-bold">Biweekly Jackpot</h2>
              
@@ -77,7 +79,8 @@
 
               
             </router-link>
-            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121; background-image: url('src/assets/Group 10.svg'); height: 347px;  ">
+            <router-link to="/jackpot/deposit" class=" card-link record-card bg-black p-6 rounded-lg text-white  shadow-lg" style="background-color: #222121; background-image: url('src/assets/Group 10.svg'); height: 347px;  background-repeat: no-repeat;     background-size: cover;
+    background-position: center; ">
             
               <h2 class="text-lg font-bold">Monthly jackpot</h2>
             

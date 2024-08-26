@@ -1,16 +1,16 @@
 <template>
   <LoginTopBar />
-  <div class="flex h-screen bg-black text-white overflow-hidden">
+  <div class="flex min-h-screen bg-black text-white overflow-hidden">
     <!-- Chat Section -->
     <div
       :class="[
         'transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-2/11' : 'w-0',
         isChatVisible ? 'block' : 'hidden',
-        'bg-gray-900 overflow-hidden'
+        'bg-gray-900 '
       ]"
     >
-      <div class="p-6 h-full overflow-y-auto">
+      <div class="p-6 h-full">
         <Chat />
       </div>
     </div>
@@ -21,15 +21,15 @@
         'flex-grow transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-9/11' : 'w-full'
       ]"
-      class="flex flex-col justify-center items-center overflow-hidden relative">
+      class="flex flex-col justify-center items-center overflow-hidden ">
       <!-- Go Back Button -->
-      <div class="absolute top-3 left-0 p-4">
+      <div class="row w-full p-4 mt-3">
         <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
           <img src="@/assets/arrow-left.svg" alt="">
         </button>
       </div>
 
-      <div class="main-content text-center h-full overflow-y-auto">
+      <div class="main-content text-center h-full ">
         <!-- Circle with Timer -->
         <div class="relative inline-block flex justify-center items-center">
           <div class="w-72 h-72 rounded-full bg-[#1B1B1B] flex justify-center items-center flex-col z-10">
@@ -53,21 +53,16 @@
         </div>
 
         <!-- Value and Button Section -->
-        <div class="flex justify-between items-center mb-0 rounded-full shadow-xl p-8 card" style="background-color:#171717; height: 188px; margin-top:-224px; ">
+        <div class="flex justify-between items-center mb-0 rounded-full shadow-xl p-8 card" style="background-color:#171717; height: 188px; margin-top:-210px; ">
           <p class="text-2xl ">${{ amount.toFixed(2) }}</p>
           <p class="text-2xl ">30/200</p>
         </div>
         <div class="flex justify-between items-center mb-0 rounded-xl p-4 mx-4" style="background-color:#222121; margin-bottom:-30px; box-shadow: 0px 4px 6px #171717;">
-          <router-link to="/jackpot/inventory">
-            <div>
-              <p class="text-xl">See Inventory</p>
-            </div>
-           
+          <router-link to="/jackpot/inventory" class="text-xl">See Inventory
+          
           </router-link>
-          <router-link to="/jackpot/history">
-            <div>
-              <p class="text-xl">Jackpot History</p>
-            </div>
+          <router-link to="/jackpot/history" class="text-xl">Jackpot History
+           
           
           </router-link>
         </div>
@@ -194,8 +189,8 @@
   <style scoped>
   .main-content {
     max-width: 800px;
-    height: calc(100vh - 100px); /* Adjust according to the height of the LoginTopBar */
-    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 30px;
+    margin-bottom: 30px;
     overflow-x: hidden; /* Disable horizontal scrolling */
   }
   

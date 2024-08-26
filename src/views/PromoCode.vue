@@ -1,6 +1,6 @@
 <template>
     <LoginTopBar />
-    <div class="flex h-screen">
+    <div class="flex min-h-screen">
       <!-- Chat Section -->
       <div
         :class="[
@@ -10,7 +10,7 @@
           'bg-gray-800 text-white overflow-hidden'
         ]"
       >
-        <div class="p-6" style="height:calc(100vh - 100px); overflow-y: auto">
+        <div class="p-6" >
           <Chat />
         </div>
       </div>
@@ -22,7 +22,7 @@
           isChatVisible ? 'w-9/11' : 'w-full'
         ]"
         class="bg-gray-100 p-6"
-        style="height:calc(100vh - 40px); overflow-y: auto"
+     
       >
       <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md mb-2">
         <img src="@/assets/arrow-left.svg" alt="">

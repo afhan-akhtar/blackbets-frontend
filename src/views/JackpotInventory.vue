@@ -1,16 +1,16 @@
 <template>
     <LoginTopBar />
-    <div class="flex h-screen bg-black text-white overflow-hidden">
+    <div class="flex min-h-screen bg-black text-white overflow-hidden">
       <!-- Chat Section -->
       <div
         :class="[
           'transition-all duration-300 ease-in-out',
           isChatVisible ? 'w-2/11' : 'w-0',
           isChatVisible ? 'block' : 'hidden',
-          'bg-gray-900 overflow-hidden'
+          'bg-gray-900 '
         ]"
       >
-        <div class="p-6 h-full overflow-y-auto">
+        <div class="p-6 h-full ">
           <Chat />
         </div>
       </div>
@@ -21,15 +21,16 @@
           'flex-grow transition-all duration-300 ease-in-out',
           isChatVisible ? 'w-9/11' : 'w-full'
         ]"
-        class="flex flex-col justify-center items-center overflow-hidden relative"
+        class="flex flex-col justify-center items-center overflow-hidden "
       >
        <!-- Go Back Button -->
-       <div class="absolute top-3 left-0 p-4">
+       <div class="row w-full p-4 mt-3">
         <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
           <img src="@/assets/arrow-left.svg" alt="">
         </button>
       </div>
-        <div class="main-content text-center h-full overflow-y-auto">
+      
+        <div class="main-content text-center h-full">
           <!-- Current Items Section -->
           <div
             class="py-6 px-0 rounded-xl shadow-xl bg-gray-900 border-gray-700"
@@ -160,8 +161,8 @@ v-if="hasSelectedOnce" class="bottom-0 left-0 right-0 flex justify-center items-
   <style scoped>
   .main-content {
     max-width: 800px;
-    height: calc(100vh - 100px); /* Adjust according to the height of the LoginTopBar */
-    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 30px;
+    margin-bottom: 30px;
     overflow-x: hidden; /* Disable horizontal scrolling */
   }
   

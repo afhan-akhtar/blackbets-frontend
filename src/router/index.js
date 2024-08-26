@@ -7,7 +7,6 @@ import Dashboard from '../views/Dashboard.vue'
 import Settings from '../views/Settings.vue'
 import Miscellaneous from '../views/Miscellaneous.vue'
 import Users from '../views/Users.vue'
-import Profile from '../views/Profile.vue'
 import ProvablyFair from '../views/ProvablyFair.vue'
 import Faqs from '../views/Faqs.vue'
 import TermsOfService from '../views/TermsOfService.vue'
@@ -86,11 +85,7 @@ const router = createRouter({
       name: 'TermsOfService',
       component: TermsOfService
     },
-    {
-      path: '/profile',
-      name: 'Profile',
-      component: Profile
-    },
+    
     {
       path: '/coinflip/view',
       name: 'ViewCoinflip',

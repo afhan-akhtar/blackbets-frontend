@@ -1,16 +1,16 @@
 <template>
   <TopBar />
-  <div class="flex h-screen flex-col xl:flex-row">
+  <div class="flex min-h-screen flex-col xl:flex-row">
     <!-- Chat Section -->
     <div
     :class="[
       'transition-all duration-300 ease-in-out',
       isChatVisible ? 'w-2/11' : 'w-0',
       isChatVisible ? 'block' : 'hidden',
-      'bg-gray-800 text-white overflow-hidden'
+      'bg-gray-800 text-white'
     ]"
   >
-      <div class="p-6 h-full overflow-y-auto">
+      <div class="p-6 h-full ">
         <Chat />
       </div>
     </div>
@@ -21,7 +21,7 @@
         'flex-grow transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-9/11' : 'w-full'
       ]"
-      class="bg-gray-100 p-6 h-full overflow-y-auto"
+      class="bg-gray-100 p-6 h-full "
     >
       <!-- <button @click="toggleChat" class="mb-4 p-2 bg-blue-500 text-white rounded">
         Toggle Chat
@@ -30,7 +30,7 @@
         <img src="@/assets/arrow-left.svg" alt="">
       </button>
         <div >
-          <!-- Main content goes here -->
+          
           <!-- Main Card Section -->
           <div class="bg-gray-900 p-6 rounded-lg shadow-lg  main-card" style="background-color: #171717; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); border: 3px solid #222121;  ">
             <div class="text-white text-center mb-4"></div>

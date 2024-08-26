@@ -8,7 +8,7 @@
         <div
         class="w-[60px] h-[60px] rounded-full overflow-hidden absolute left-2 top-1/2 transform -translate-y-1/2 z-10 border-2 border-white"
       >
-        <img src="@/assets/Rectangle 2116cans.svg" alt="User Profile" class="object-cover w-full h-full" />
+        <img src="@/assets/Rectangle 2116cans.svg" alt="User Profile" class="object-cover w-full h-[66px]" style="margin-top:-3px;" />
       </div>
       </div>
       <div class="ml-20">
@@ -68,5 +68,8 @@ export default {
   height: 63px;
   margin: 0 auto; /* Center the container */
   padding: 0 0; /* Optional padding for better spacing */
+}
+.border-2{
+  border-width: 3px;
 }
 </style>

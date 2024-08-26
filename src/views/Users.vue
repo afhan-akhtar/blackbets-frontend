@@ -1,16 +1,16 @@
 <template>
     <LoginTopBar />
-    <div class="flex h-screen flex-col xl:flex-row">
+    <div class="flex min-h-screen flex-col xl:flex-row">
       <!-- Chat Section -->
       <div
       :class="[
         'transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-2/11' : 'w-0',
         isChatVisible ? 'block' : 'hidden',
-        'bg-gray-800 text-white overflow-hidden'
+        'bg-gray-800 text-white'
       ]"
     >
-        <div class="p-6 h-full overflow-y-auto">
+        <div class="p-6 h-full ">
           <Chat />
         </div>
       </div>
@@ -21,7 +21,7 @@
           'flex-grow transition-all duration-300 ease-in-out',
           isChatVisible ? 'w-9/11' : 'w-full'
         ]"
-        class="bg-gray-100 p-6 h-full overflow-y-auto"
+        class="bg-gray-100 p-6 h-full "
       >
       <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md mb-2">
         <img src="@/assets/arrow-left.svg" alt="">
@@ -81,6 +81,98 @@
                       <td class="text-start p-2 text-lg cursor-pointer">Chatban</td>
                       <td class="text-start p-2 text-lg">Ban</td>
                     </tr>
+                    <tr @click="openBanModal" class="hover:bg-gray-700 border-bottom" style="background-color: #222121; cursor:pointer;">
+                      <td class="text-start p-2 text-lg flex items-center">
+                        <img src="@/assets/Ellipse 120user.svg" alt="" class="mr-2"> <!-- Add margin-right to separate image and text -->
+                        <span>Gooner187420</span>
+                      </td>
+                      <td class="text-start p-2 text-lg">$532.53</td>
+                      <td class="text-start p-2 text-lg">-$2.32</td>
+                      <td class="text-start p-2 text-lg">View</td>
+                      <td class="text-start p-2 text-lg">Elliot</td>
+                      <td class="text-start p-2 text-lg">Pinkyy</td>
+                      <td class="text-start p-2 text-lg cursor-pointer">Chatban</td>
+                      <td class="text-start p-2 text-lg">Ban</td>
+                    </tr>
+                    <tr @click="openBanModal" class="hover:bg-gray-700 border-bottom" style="background-color: #222121; cursor:pointer;">
+                      <td class="text-start p-2 text-lg flex items-center">
+                        <img src="@/assets/Ellipse 120user.svg" alt="" class="mr-2"> <!-- Add margin-right to separate image and text -->
+                        <span>Gooner187420</span>
+                      </td>
+                      <td class="text-start p-2 text-lg">$532.53</td>
+                      <td class="text-start p-2 text-lg">-$2.32</td>
+                      <td class="text-start p-2 text-lg">View</td>
+                      <td class="text-start p-2 text-lg">Elliot</td>
+                      <td class="text-start p-2 text-lg">Pinkyy</td>
+                      <td class="text-start p-2 text-lg cursor-pointer">Chatban</td>
+                      <td class="text-start p-2 text-lg">Ban</td>
+                    </tr>
+                    <tr @click="openBanModal" class="hover:bg-gray-700 border-bottom" style="background-color: #222121; cursor:pointer;">
+                      <td class="text-start p-2 text-lg flex items-center">
+                        <img src="@/assets/Ellipse 120user.svg" alt="" class="mr-2"> <!-- Add margin-right to separate image and text -->
+                        <span>Gooner187420</span>
+                      </td>
+                      <td class="text-start p-2 text-lg">$532.53</td>
+                      <td class="text-start p-2 text-lg">-$2.32</td>
+                      <td class="text-start p-2 text-lg">View</td>
+                      <td class="text-start p-2 text-lg">Elliot</td>
+                      <td class="text-start p-2 text-lg">Pinkyy</td>
+                      <td class="text-start p-2 text-lg cursor-pointer">Chatban</td>
+                      <td class="text-start p-2 text-lg">Ban</td>
+                    </tr>
+                    <tr @click="openBanModal" class="hover:bg-gray-700 border-bottom" style="background-color: #222121; cursor:pointer;">
+                      <td class="text-start p-2 text-lg flex items-center">
+                        <img src="@/assets/Ellipse 120user.svg" alt="" class="mr-2"> <!-- Add margin-right to separate image and text -->
+                        <span>Gooner187420</span>
+                      </td>
+                      <td class="text-start p-2 text-lg">$532.53</td>
+                      <td class="text-start p-2 text-lg">-$2.32</td>
+                      <td class="text-start p-2 text-lg">View</td>
+                      <td class="text-start p-2 text-lg">Elliot</td>
+                      <td class="text-start p-2 text-lg">Pinkyy</td>
+                      <td class="text-start p-2 text-lg cursor-pointer">Chatban</td>
+                      <td class="text-start p-2 text-lg">Ban</td>
+                    </tr>
+                    <tr @click="openBanModal" class="hover:bg-gray-700 border-bottom" style="background-color: #222121; cursor:pointer;">
+                      <td class="text-start p-2 text-lg flex items-center">
+                        <img src="@/assets/Ellipse 120user.svg" alt="" class="mr-2"> <!-- Add margin-right to separate image and text -->
+                        <span>Gooner187420</span>
+                      </td>
+                      <td class="text-start p-2 text-lg">$532.53</td>
+                      <td class="text-start p-2 text-lg">-$2.32</td>
+                      <td class="text-start p-2 text-lg">View</td>
+                      <td class="text-start p-2 text-lg">Elliot</td>
+                      <td class="text-start p-2 text-lg">Pinkyy</td>
+                      <td class="text-start p-2 text-lg cursor-pointer">Chatban</td>
+                      <td class="text-start p-2 text-lg">Ban</td>
+                    </tr>
+                    <tr @click="openBanModal" class="hover:bg-gray-700 border-bottom" style="background-color: #222121; cursor:pointer;">
+                      <td class="text-start p-2 text-lg flex items-center">
+                        <img src="@/assets/Ellipse 120user.svg" alt="" class="mr-2"> <!-- Add margin-right to separate image and text -->
+                        <span>Gooner187420</span>
+                      </td>
+                      <td class="text-start p-2 text-lg">$532.53</td>
+                      <td class="text-start p-2 text-lg">-$2.32</td>
+                      <td class="text-start p-2 text-lg">View</td>
+                      <td class="text-start p-2 text-lg">Elliot</td>
+                      <td class="text-start p-2 text-lg">Pinkyy</td>
+                      <td class="text-start p-2 text-lg cursor-pointer">Chatban</td>
+                      <td class="text-start p-2 text-lg">Ban</td>
+                    </tr>
+                    <tr @click="openBanModal" class="hover:bg-gray-700 border-bottom" style="background-color: #222121; cursor:pointer;">
+                      <td class="text-start p-2 text-lg flex items-center">
+                        <img src="@/assets/Ellipse 120user.svg" alt="" class="mr-2"> <!-- Add margin-right to separate image and text -->
+                        <span>Gooner187420</span>
+                      </td>
+                      <td class="text-start p-2 text-lg">$532.53</td>
+                      <td class="text-start p-2 text-lg">-$2.32</td>
+                      <td class="text-start p-2 text-lg">View</td>
+                      <td class="text-start p-2 text-lg">Elliot</td>
+                      <td class="text-start p-2 text-lg">Pinkyy</td>
+                      <td class="text-start p-2 text-lg cursor-pointer">Chatban</td>
+                      <td class="text-start p-2 text-lg">Ban</td>
+                    </tr>
+                    
                     
                   </tbody>
                 </transition>

@@ -1,16 +1,16 @@
 <template>
   <LoginTopBar />
-  <div class="flex h-screen">
+  <div class="flex min-h-screen">
     <!-- Chat Section -->
     <div
       :class="[
         'transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-2/11' : 'w-0',
         isChatVisible ? 'block' : 'hidden',
-        'bg-gray-800 text-white overflow-hidden'
+        'bg-gray-800 text-white '
       ]"
     >
-      <div class="p-6" style="height: calc(100vh - 100px); overflow-y: auto;">
+      <div class="p-6" >
         <Chat />
       </div>
     </div>
@@ -21,31 +21,43 @@
         'flex-grow transition-all duration-300 ease-in-out',
         isChatVisible ? 'w-9/11' : 'w-full'
       ]"
-      class="bg-black p-6" style="height: calc(100vh - 100px); overflow-y: auto;"
+      class="bg-black p-6" 
     >
-    <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
-      <img src="@/assets/arrow-left.svg" alt="">
-    </button>
+
       <!-- Header -->
-      <div class="flex justify-between items-center text-white mb-8 relative">
+      
        
-        <h1 class="text-lg">Welcome Back, Zaqk187420</h1>
-      </div>
+        <h1 class="text-lg text-white">Welcome Back, Zaqk187420</h1>
+      
 
       <div class="main-content mt-8">
         <!-- Top Banner -->
         <div class="top-banner flex" style="height:230px;">
           <!-- Coinflips Card -->
-          <router-link to="/coinflip" class="card-link coinflips-card flex items-center justify-between text-white py-6 px-0 rounded-lg shadow-lg w-1/2" style="background-color: #171717; border: 3px solid #222121; height:223px;">
-            <img src="@/assets/coinflip-left.svg" alt="Left Image">
-            <h2 class="text-4xl font-bold text-center flex-1 mx-4">Coinflips</h2>
-            <img src="@/assets/coinflip-right.svg" alt="Right Image">
-          </router-link>
+<router-link to="/coinflip" class="card-link coinflips-card flex items-center justify-between text-white py-6 px-0 rounded-lg shadow-lg w-1/2" style="background-color: #171717; border: 3px solid #222121; height:223px; line-height: 0;">
+  <div>
+    <img src="@/assets/coinflip-left.svg" alt="Left Image" style="display: block; border: none; outline: none; margin: 0; background-repeat: no-repeat;">
+  </div>
+  <div>
+    <h2 class="text-4xl font-bold text-center flex-1 mx-4">Coinflips</h2>
+  </div>
+  <div>
+    <img src="@/assets/coinflip-right.svg" alt="Right Image" style="display: block; border: none; outline: none; margin: 0;">
+  </div>
+</router-link>
+
         
           <!-- Jackpot Card -->
-          <router-link to="/jackpot" class="card-link jackpot-card flex items-center justify-center  bg-top text-white p-6 rounded-lg shadow-lg w-1/2 ml-6" style="background-image: url('src/assets/Group 5.svg'); background-color: #171717; border: 3px solid #222121; height:223px;">
-            <h2 class="text-4xl font-bold text-center">Jackpot</h2>
-          </router-link>
+        
+<router-link to="/jackpot" class="card-link flex items-center justify-center bg-top text-white p-6 rounded-lg shadow-lg w-1/2 ml-6" style="background-color: #171717; border: 3px solid #222121; height: 223px;">
+  <div class="jackpot-card-background w-full h-full bg-no-repeat  rounded-lg" style="background-image: url('src/assets/Group 5.svg'); height: 220px;">
+    <div class="flex items-center justify-center h-full">
+      <h2 class="text-4xl font-bold text-center">Jackpot</h2>
+    </div>
+  </div>
+</router-link>
+
+          
         </div>
         
         <div class="p-6 rounded-lg shadow-lg mt-6 text-white" style="background-color: #171717; border: 3px solid #222121;">
@@ -61,7 +73,7 @@
             
               <!-- Center Image Div -->
               <div class="flex justify-center">
-                <img src="@/assets/Group 1biggest_jacpot.svg" alt="Jackpot"  />
+                <img style="background-repeat: no-repeat;" src="@/assets/Group 1biggest_jacpot.svg" alt="Jackpot"  />
               </div>
             
               <!-- Bottom Text Div -->
@@ -79,7 +91,7 @@
             
               <!-- Center Image Div -->
               <div class="flex justify-center">
-                <img src="@/assets/Group 3.svg" alt="Lucky Clover"  />
+                <img style="background-repeat: no-repeat;" src="@/assets/Group 3.svg" alt="Lucky Clover"  />
               </div>
             
               <!-- Bottom Text Div -->
@@ -97,7 +109,7 @@
             
               <!-- Center Image Div -->
               <div class="flex justify-center">
-                <img src="@/assets/Group 4.svg" alt="Coinflip"  />
+                <img style="background-repeat: no-repeat;" src="@/assets/Group 4.svg" alt="Coinflip"  />
               </div>
             
               <!-- Bottom Text Div -->
@@ -151,9 +163,7 @@ export default {
         // Handle error (e.g., show error message to user)
       }
     },
-    goBack() {
-      this.$router.go(-1);
-    },
+   
   },
 };
 </script>
