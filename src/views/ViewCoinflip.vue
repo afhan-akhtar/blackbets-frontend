@@ -26,40 +26,7 @@
       <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md mb-2">
         <img src="@/assets/arrow-left.svg" alt="">
       </button>
-        <div class="main-content px-4 bg-[#222121] rounded-xl card shadow-xl">
-          <div class="flex justify-around items-center pt-8">
-            <div v-for="(user, index) in users" :key="index">
-              <img :src="user.imageSrc" :alt="user.name" />
-              <div class="flex justify-center text-white">
-                <p>{{ user.name }}</p>
-              </div>
-            </div>
-          </div>
-  
-          <div class="flex mt-8">
-            <div v-for="(stat, index) in stats" :key="index" class="w-1/2 px-8 pb-0 pt-8">
-              <div class="flex justify-around items-center bg-gray-700 px-0 text-white">
-                <p class="text-lg font-bold">{{ stat.value }}</p>
-                <p>{{ stat.percentage }}</p>
-              </div>
-            </div>
-          </div>
-          <hr class="hr" />
-  
-          <div v-for="(item, index) in items" :key="index" class="flex mt-8">
-            <div class="w-1/2 px-16 pb-0 pt-0 mb-4" v-for="side in [0, 1]" :key="side">
-              <router-link to="/coinflip/inventory" class="text-white card card-link rounded-xl shadow-xl flex justify-around items-center bg-[#171717] py-4">
-                <div class="flex items-center justify-start">
-                  <img :src="item.imageSrc" alt="" />
-                  <p>{{ item.title }}</p>
-                </div>
-                <div>
-                  <p>{{ item.price }}</p>
-                </div>
-            </router-link>
-            </div>
-          </div>
-        </div>
+        <CoinflipView />
       </div>
     </div>
   </template>
@@ -67,81 +34,18 @@
   <script>
   import Chat from "../components/common/Chat.vue";
   import LoginTopBar from "../components/common/LoginTopBar.vue";
-  
-  // Import images
-  import Rectangle1741 from "@/assets/Rectangle 1741.svg";
-  import Rectangle1742 from "@/assets/Rectangle 1742.svg";
-  import Image11 from "@/assets/image 11.svg";
-  import Image1089 from "@/assets/6TMcQ7eX6E0EZl2byXi7vaVKyDk_zQLX05x6eLCFM9neAckxGDf7qU2e2gu64OnAeQ7835Ze4GPFfCk4nReh8DEiv5daOK47rbM2R_m-2xOvlqs 1089.svg";
+  import CoinflipView from "../components/common/CoinflipView.vue";
   
   export default {
   components: {
     Chat,
     LoginTopBar,
+    CoinflipView
   },
   data() {
     return {
       isChatVisible: true,
-      users: [
-        { name: "Zaqk187420", imageSrc: Rectangle1741 },
-        { name: "Quintice420", imageSrc: Rectangle1742 },
-      ],
-      stats: [
-        { value: "$1.32", percentage: "48.72%" },
-        { value: "$1.32", percentage: "48.72%" },
-      ],
-      items: [
-        {
-          title: "Pirate Treasures Door",
-          price: "$0.68",
-          imageSrc: Image11,
-        },
-        {
-          title: "Pirate Treasures Door",
-          price: "$0.64",
-          imageSrc: Image1089,
-        },
-        {
-            title: "Pirate Treasures Door",
-          price: "$1.24",
-          imageSrc: Image11,
-        },
-        {
-            title: "Pirate Treasures Door",
-          price: "$0.89",
-          imageSrc: Image1089,
-        },
-        {
-            title: "Pirate Treasures Door",
-          price: "$2.35",
-          imageSrc: Image11,
-        },
-        {
-            title: "Pirate Treasures Door",
-          price: "$3.12",
-          imageSrc: Image1089,
-        },
-        {
-            title: "Pirate Treasures Door",
-          price: "$5.00",
-          imageSrc: Image11,
-        },
-        {
-            title: "Pirate Treasures Door",
-          price: "$7.50",
-          imageSrc: Image1089,
-        },
-        {
-            title: "Pirate Treasures Door",
-          price: "$10.99",
-          imageSrc: Image11,
-        },
-        {
-            title: "Pirate Treasures Door",
-          price: "$15.99",
-          imageSrc: Image1089,
-        },
-      ],
+     
     };
   },
   methods: {

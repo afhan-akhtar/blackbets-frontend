@@ -45,31 +45,11 @@
             </div>
   
             <!-- Rows of Items -->
-            <div
-              v-for="(row, rowIndex) in itemRows"
-              :key="'row-' + rowIndex"
-              class="flex justify-center space-x-4 py-4"
-              style="margin: 20px; margin-top:0px;"
-            >
-              <div
-                v-for="(item, itemIndex) in row"
-                :key="'item-' + itemIndex"
-                :class="[
-                  'bg-[#171717] p-2 rounded-md w-24 text-center cursor-pointer',
-                  selectedItems.includes(item) ? 'bg-[#9D9D9D]' : ''
-                ]"
-                @click="toggleItemSelection(item)"
-              >
-                <div class=" rounded-t-xl overflow-hidden mb-2">
-                  <img
-                    src="@/assets/inventory.svg"
-                    alt="Item Image"
-                    class="object-cover w-full h-16"
-                  />
-                </div>
-                <p class="text-xs text-white">Item {{ item }}</p>
-              </div>
-            </div>
+            <Inventory
+            :itemRows="itemRows"
+            :selectedItems="selectedItems"
+            @toggleItemSelection="toggleItemSelection"
+          />
             
          <!-- Deposit Button Section -->
 <div
@@ -96,11 +76,13 @@ v-if="hasSelectedOnce" class="bottom-0 left-0 right-0 flex justify-center items-
   <script>
   import Chat from "../components/common/Chat.vue";
   import LoginTopBar from "../components/common/LoginTopBar.vue";
+  import Inventory from "../components/common/Inventory.vue";
   
   export default {
     components: {
       Chat,
       LoginTopBar,
+      Inventory
     },
     data() {
         return {

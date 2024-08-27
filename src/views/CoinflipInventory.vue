@@ -32,7 +32,7 @@
         <div class="main-content text-center h-full">
           <!-- Current Items Section -->
           <div
-            class="py-6 px-0 rounded-xl shadow-xl bg-gray-900 border-gray-700"
+            class="py-6 px-0 rounded-xl shadow-xl bg-gray-900 border-gray-700 mb-3"
             style="width: 800px; background-color: #222121;"
           >
             <p class="font-bold mb-4 text-xl">My Inventory</p>
@@ -43,32 +43,14 @@
               <img src="@/assets/Rectangle 1215.svg" alt="Centered Image" />
             </div>
   
+            
+            
             <!-- Rows of Items -->
-            <div
-              v-for="(row, rowIndex) in itemRows"
-              :key="'row-' + rowIndex"
-              class="flex justify-center space-x-4 py-4"
-              style="margin: 20px; margin-top:0px;"
-            >
-              <div
-                v-for="(item, itemIndex) in row"
-                :key="'item-' + itemIndex"
-                :class="[
-                  'bg-[#171717] p-2 rounded-md w-24 text-center cursor-pointer',
-                  selectedItems.includes(item) ? 'bg-[#9D9D9D]' : ''
-                ]"
-                @click="toggleItemSelection(item)"
-              >
-                <div class=" rounded-t-xl overflow-hidden mb-2">
-                  <img
-                    src="@/assets/inventory.svg"
-                    alt="Item Image"
-                    class="object-cover w-full h-16"
-                  />
-                </div>
-                <p class="text-xs text-white">Item {{ item }}</p>
-              </div>
-            </div>
+            <Inventory
+            :itemRows="itemRows"
+            :selectedItems="selectedItems"
+            @toggleItemSelection="toggleItemSelection"
+          />
             
          <!-- Deposit Button Section -->
          <div
@@ -117,11 +99,13 @@
   <script>
   import Chat from "../components/common/Chat.vue";
   import LoginTopBar from "../components/common/LoginTopBar.vue";
+  import Inventory from "../components/common/Inventory.vue";
   
   export default {
     components: {
       Chat,
       LoginTopBar,
+      Inventory
     },
     data() {
         return {

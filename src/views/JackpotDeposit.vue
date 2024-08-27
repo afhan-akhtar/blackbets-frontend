@@ -31,48 +31,10 @@
 
       <div class="main-content text-center h-full ">
         <!-- Circle with Timer -->
-        <div class="relative inline-block flex justify-center items-center">
-          <div class="w-72 h-72 rounded-full bg-[#1B1B1B] flex justify-center items-center flex-col z-10">
-            <!-- Outer circle -->
-             <div class="absolute" style="top:-5px;">
-              <img src="@/assets/Polygon 50.svg" alt="">
-             </div>
-              <div class="absolute" style="top:20px;">
-                <img src="@/assets/Polygon 51.svg" alt="">
-              </div>
-            
-            <div class="w-60 h-60 rounded-full shadow-xl flex justify-center items-center" style="background-color: #222121;">
-             
-              <img src="@/assets/Group 11.svg" alt="Timer Background" class="w-full h-full rounded-full" />
-            </div>
-            <!-- Text Overlay -->
-            <div class="flex flex-col justify-center items-center text-center text-white absolute">
-              <p class="text-4xl font-bold mb-2">2m 0s</p>
-            </div>
-          </div>
-        </div>
+        <TimerCircle :timer="'2m 0s'" />
 
         <!-- Value and Button Section -->
-        <div class="flex justify-between items-center mb-0 rounded-full shadow-xl p-8 card" style="background-color:#171717; height: 188px; margin-top:-210px; ">
-          <p class="text-2xl ">${{ amount.toFixed(2) }}</p>
-          <p class="text-2xl ">30/200</p>
-        </div>
-        <div class="flex justify-between items-center mb-0 rounded-xl p-4 mx-4" style="background-color:#222121; margin-bottom:-30px; box-shadow: 0px 4px 6px #171717;">
-          <router-link to="/jackpot/inventory" class="text-xl">See Inventory
-          
-          </router-link>
-          <router-link to="/jackpot/history" class="text-xl">Jackpot History
-           
-          
-          </router-link>
-        </div>
-        
-
-        <button type="submit" @click="handleTransaction" class="card text-2xl text-black px-6 py-3 font-bold" style="background-color: #222121; clip-path: polygon(0% 0%, -50% 0%, 100% 0%, 100% 0%, 90% 100%, 10% 100%); box-shadow: 0px 4px 6px #171717;">
-          DEPOSIT
-          <!-- <p v-if="transactionStatus" class="mt-4 text-lg">{{ transactionStatus }}</p> -->
-          <p class="mt-4 text-lg">Instant Jackpot</p>
-        </button>
+        <ValueAndButtonSection :amount="amount" @handleTransaction="handleTransaction" />
         
 
         <!-- Current Items Section -->
@@ -80,58 +42,11 @@
           <p class="font-bold mb-4 text-xl">Current Items</p>
           <hr class="color-hr" />
 
-          <!-- Single row of 5 small cards -->
-          <div class="flex flex-col items-center space-y-4 py-4 card rounded-lg shadow-lg" style="background-color: #222121; margin: 20px;">
-            <!-- Centered Image Above Items -->
-            <div class="flex flex-col items-center">
-              <img src="@/assets/Rectangle 93chat.svg" alt="New Image" class="object-cover h-20 mb-2" />
-              <div class="flex flex-row items-center text-white space-x-4">
-                <p class="text-lg">$2.32</p>
-                <p class="text-sm">12.64%</p>
-              </div>
-            </div>
+             <!-- Single row of 5 small cards -->
+             <ItemCard :itemsPerRow="5" :numberOfRows="1" />
 
-            <!-- Items Row -->
-            <div class="flex justify-center space-x-4">
-              <div v-for="item in 5" :key="'small-' + item" class="bg-[#171717] p-2 rounded-md w-24 text-center">
-                <div class="relative rounded-t-xl overflow-hidden mb-2">
-                  <img src="@/assets/inventory.svg" alt="Item Image" class="object-cover w-full h-16" />
-                </div>
-                <p class="text-xs text-white">Item {{ item }}</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="card rounded-xl shadow-xl" style="background-color:#222121; margin:20px;">
-            <!-- New Image Above Rows -->
-            <div class="flex flex-col items-center">
-              <img src="@/assets/Rectangle 93chat.svg" alt="New Image" class="object-cover h-20 mb-2" />
-              <div class="flex flex-row items-center text-white space-x-4">
-                <p class="text-lg">$2.32</p>
-                <p class="text-sm">12.64%</p>
-              </div>
-            </div>
-
-            <!-- First Row of Items -->
-            <div class="flex justify-center space-x-4 py-4">
-              <div v-for="item in 5" :key="'small-' + item" class="bg-[#171717] p-2 rounded-md w-24 text-center">
-                <div class="rounded-t-xl overflow-hidden">
-                  <img src="@/assets/inventory.svg" alt="Item Image" class="object-cover w-full h-16" />
-                </div>
-                <p class="text-xs text-white mt-1">Item {{ item }}</p>
-              </div>
-            </div>
-
-            <!-- Second Row of Items -->
-            <div class="flex justify-center space-x-4 py-4">
-              <div v-for="item in 5" :key="'small-' + item" class="bg-[#171717] p-2 rounded-md w-24 text-center">
-                <div class="rounded-t-xl overflow-hidden">
-                  <img src="@/assets/inventory.svg" alt="Item Image" class="object-cover w-full h-16" />
-                </div>
-                <p class="text-xs text-white mt-1">Item {{ item }}</p>
-              </div>
-            </div>
-          </div>
+             <!-- Two rows of 5 small cards each -->
+             <ItemCard :itemsPerRow="5" :numberOfRows="2" />
         </div>
       </div>
     </div>
@@ -143,11 +58,17 @@
   import axios from 'axios';
   import Chat from "../components/common/Chat.vue";
   import LoginTopBar from "../components/common/LoginTopBar.vue";
+  import ItemCard from "../components/common/ItemCard.vue";
+  import TimerCircle from "../components/common/TimerCircle.vue";
+  import ValueAndButtonSection from "../components/common/ValueAndButtonSection.vue";
   
   export default {
     components: {
       Chat,
       LoginTopBar,
+      ItemCard,
+      TimerCircle,
+      ValueAndButtonSection
     },
     data() {
       return {
