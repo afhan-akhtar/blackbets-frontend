@@ -1,13 +1,13 @@
 <template>
-  <div class="message flex items-start space-x-4 secondaryBlack py-4 rounded-lg mx-full primaryStroke">
+  <div class="message flex items-center space-x-4 secondaryBlack py-4 rounded-lg mx-full primaryStroke shadow-xl">
     <!-- Use a static default avatar image -->
-    <img class="w-12 h-12 rounded-full ml-4" src="@/assets/Rectangle 93chat.svg" alt="Avatar" />
+    <img class="w-[80px] h-[80px] rounded-full" src="@/assets/Rectangle 93chat.svg" alt="Avatar" />
     <div>
       <div class="flex items-center space-x-2">
-        <span class="text-white font-semibold">{{ username }}</span>
-        <span class="text-gray-400 text-sm">{{ time }}</span>
+        <span class="text-white font-bold text-lg">{{ username }}</span>
+        <span class="text-gray-400 text-sm" style="color: #72767D">{{ time }}</span>
       </div>
-      <div class="text-white mt-1">{{ message }}</div>
+      <div class="text-white mt-1 text-md" style="color: #DCDDDE">{{ message }}</div>
     </div>
   </div>
 </template>

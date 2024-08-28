@@ -19,7 +19,7 @@
       
       </div> -->
     </div>
-  <div v-if="isChatVisible"  class="container mx-auto bg-secondaryBlack primaryStroke p-2">
+  <div v-if="isChatVisible"  class="container mx-auto bg-secondaryBlack primaryStroke p-2 rounded-xl shadow-xl">
   
 
     <!-- Top Red Section with OnlineAndSocial Component -->
@@ -36,15 +36,7 @@
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
-          time="1 minute ago"
-          message="Wow this site is amazingg"
-        />
-      </div>
-      <div class="bg-blue-500 flex justify-center items-center p-4">
-        <ChatMessage
-          avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
-          username="Zaqk187420"
-          time="1 minute ago"
+          time="10 minutes ago"
           message="Wow this site is amazing"
         />
       </div>
@@ -52,7 +44,7 @@
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
-          time="1 minute ago"
+          time="10 minutes ago"
           message="Wow this site is amazing"
         />
       </div>
@@ -60,7 +52,7 @@
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
-          time="1 minute ago"
+          time="5 minutes ago"
           message="Wow this site is amazing"
         />
       </div>
@@ -68,7 +60,7 @@
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
-          time="1 minute ago"
+          time="3 minutes ago"
           message="Wow this site is amazing"
         />
       </div>
@@ -76,13 +68,23 @@
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
-          time="1 minute ago"
+          time="3 minutes ago"
           message="Wow this site is amazing"
         />
       </div>
+      <div class="bg-blue-500 flex justify-center items-center p-4">
+        <ChatMessage
+          avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
+          username="Zaqk187420"
+          time="2 minutes ago"
+          message="Wow this site is amazing"
+        />
+      </div>
+      
+     
     </div>
     <!-- Bottom Black Section with SendMessage Component -->
-    <div class="bg-black flex justify-center items-center p-4">
+    <div class="bg-black flex justify-center  items-center p-4">
       <SendMessage />
     </div>
   </div>
@@ -101,12 +103,21 @@ export default {
   },
   data() {
     return {
-      isChatVisible: true
+      isChatVisible: true // Initially set to true
+    }
+  },
+  created() {
+    // Check local storage to see if the chat was previously hidden
+    const chatState = localStorage.getItem('chatVisible')
+    if (chatState !== null) {
+      this.isChatVisible = JSON.parse(chatState)
     }
   },
   methods: {
     toggleChat() {
       this.isChatVisible = !this.isChatVisible
+      // Store the state in local storage
+      localStorage.setItem('chatVisible', this.isChatVisible)
     }
   }
 }

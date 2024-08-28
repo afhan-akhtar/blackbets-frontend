@@ -17,12 +17,13 @@
 
     <!-- Main Content Section -->
     <div
-      :class="[
-        'flex-grow transition-all duration-300 ease-in-out',
-        isChatVisible ? 'w-9/11' : 'w-full'
-      ]"
-      class="bg-black p-6" 
-    >
+    :class="[
+      'flex justify-center   transition-all duration-300 ease-in-out',
+      isChatVisible ? 'w-full' : 'w-full'
+    ]"
+    class="bg-black p-6 pt-0" 
+  >
+  <div class="main-content mt-6">
     <button @click="goBack" class="bg-[#222121] py-1 px-2 rounded-md">
       <img src="@/assets/arrow-left.svg" alt="">
     </button>
@@ -33,6 +34,7 @@
       </div>
 
       <JackpotCard />
+    </div>
     </div>
   </div>
 </template>

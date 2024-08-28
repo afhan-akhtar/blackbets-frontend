@@ -47,10 +47,10 @@
           <h2 class="text-md font-bold">GAMES</h2>
           <ul>
             <li>
-              <a href="#" class="text-gray-600 text-sm">CoinFlip</a>
+              <router-link to="/coinflip" class="text-gray-600 text-sm">CoinFlip</router-link>
             </li>
             <li>
-              <a href="#" class="text-gray-600 text-sm">Jackpot</a>
+              <router-link to="/jackpot" class="text-gray-600 text-sm">Jackpot</router-link>
             </li>
           </ul>
         </div>

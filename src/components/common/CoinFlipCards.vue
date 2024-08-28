@@ -8,8 +8,8 @@
               <div 
                 v-for="(card, index) in 8" 
                 :key="index" 
-                class="card bg-gray-800 p-4 rounded-xl shadow-xl bg-[#171717]" 
-                style="border: 1px solid #222121;"
+                class="card bg-gray-800 p-4 rounded-xl shadow-xl bg-[#171717] width" 
+                style="border: 1px solid #222121; width: 310px;"
               >
                 <p class="price text-xl text-white text-center">$15.53</p>
                 <div class="item-icons flex justify-between" style="height:92px;">
@@ -59,8 +59,8 @@
                   <div 
                     v-for="(card, index) in 4" 
                     :key="index" 
-                    class="card bg-gray-800 p-4 rounded-xl shadow-xl bg-[#171717]" 
-                    style="border: 1px solid #222121;"
+                    class="card bg-gray-800 p-4 rounded-xl shadow-xl bg-[#171717] width" 
+                    style="border: 1px solid #222121; width: 310px;"
                   >
                     <p class="price text-xl text-white text-center">$15.53</p>
                     <div class="item-icons flex justify-between" style="height:92px;">
@@ -112,8 +112,8 @@
       <div 
         v-for="(card, index) in 4" 
         :key="index" 
-        class="card bg-gray-800 p-4 rounded-xl shadow-xl bg-[#171717]" 
-        style="border: 1px solid #222121;"
+        class="card bg-gray-800 p-4 rounded-xl shadow-xl bg-[#171717] width" 
+        style="border: 1px solid #222121; width: 310px;"
       >
         <p class="price text-xl text-white text-center">$15.53</p>
         <div class="item-icons flex justify-center" style="height:92px;">
@@ -267,6 +267,24 @@ body {
  
   margin-left: -55px;
 
+}
+@media (min-width: 1280px) and (max-width:1399px) {
+  .xl\:grid-cols-4 {
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+  .width{
+    width: 270px !important;
+  }
+}
+@media (min-width: 1400px) and (max-width:1550px){
+  .width{
+    width: 245px !important;
+  }
+}
+@media (min-width: 1600px) and (max-width:1720px){
+  .width{
+    width: 270px !important;
+  }
 }
 
 

@@ -18,20 +18,15 @@
     <!-- Main Content Section -->
     <div
       :class="[
-        'flex-grow transition-all duration-300 ease-in-out',
-        isChatVisible ? 'w-9/11' : 'w-full'
+        'flex justify-center   transition-all duration-300 ease-in-out',
+        isChatVisible ? 'w-full' : 'w-full'
       ]"
-      class="bg-black p-6" 
+      class="bg-black p-6 pt-0" 
     >
 
-      <!-- Header -->
-      
-       
-        <h1 class="text-lg text-white">Welcome Back, Zaqk187420</h1>
-      
-
-      <div class="main-content mt-8">
+      <div class="main-content mt-6">
         <!-- Top Banner -->
+        <h1 class="text-lg text-white mb-3">Welcome Back, Zaqk187420</h1>
         <div class="top-banner flex" style="height:230px;">
           <!-- Coinflips Card -->
 <router-link to="/coinflip" class="card-link coinflips-card flex items-center justify-between text-white py-6 px-0 rounded-lg shadow-lg w-1/2" style="background-color: #171717; border: 3px solid #222121; height:223px; line-height: 0;">
