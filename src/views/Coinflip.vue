@@ -10,7 +10,7 @@
       'bg-gray-800 text-white'
     ]"
   >
-      <div class="p-6 h-full ">
+  <div class="py-6 px-5 h-full" >
         <Chat />
       </div>
     </div>

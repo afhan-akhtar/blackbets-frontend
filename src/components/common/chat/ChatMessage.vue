@@ -1,5 +1,5 @@
 <template>
-  <div class="message flex items-center space-x-4 secondaryBlack py-4 rounded-lg mx-full primaryStroke shadow-xl">
+  <div class="message flex items-center secondaryBlack py-4 rounded-lg mx-full primaryStroke shadow-xl">
     <!-- Use a static default avatar image -->
     <img class="w-[80px] h-[80px] rounded-full" src="@/assets/Rectangle 93chat.svg" alt="Avatar" />
     <div>

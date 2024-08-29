@@ -1,7 +1,7 @@
 <template>
     <div class="main-content text-center h-full">
       <!-- Current Items Section -->
-      <div class="py-6 px-0 rounded-xl shadow-xl bg-gray-900 border-gray-700" style="width: 800px; background-color: #222121;">
+      <div class="p-0  bg-gray-900 border-gray-700" style="width: 800px; ">
         <p class="font-bold mb-4 text-xl">Jackpot History</p>
         <hr class="color-hr mb-3" />
   

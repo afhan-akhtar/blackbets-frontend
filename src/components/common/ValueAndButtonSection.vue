@@ -6,29 +6,56 @@
         <p class="text-2xl ">30/200</p>
       </div>
       <div class="flex justify-between items-center mb-0 rounded-xl p-4" style="background-color:#222121; margin-bottom:-30px; box-shadow: 0px 4px 6px #171717; margin-left:80px; margin-right: 80px;">
-        <router-link to="/jackpot/inventory" class="text-xl">See Inventory</router-link>
-        <router-link to="/jackpot/history" class="text-xl">Jackpot History</router-link>
+        <button type="button" class="text-xl" @click.prevent="openInventory">See Inventory</button>
+        <button type="button" class="text-xl" @click.prevent="openHistory">Jackpot History</button>
       </div>
       
       <button type="submit" @click="handleTransaction" class="card text-2xl text-black px-6 py-3 font-bold" style="background-color: #222121; clip-path: polygon(0% 0%, -50% 0%, 100% 0%, 100% 0%, 90% 100%, 10% 100%); box-shadow: 0px 4px 6px #171717;">
         DEPOSIT
         <p class="mt-4 text-lg">Instant Jackpot</p>
       </button>
+       <!-- Inventory Popup -->
+    <JackpotInventory :isVisible="isPopupVisible" @close="closePopup" />
+    <JackpotHistory :isHistoryVisible="isHistoryVisible" @close="closeHistoryPopup" />
     </div>
   </template>
   
   <script>
+  import JackpotInventory from "@/views/JackpotInventory.vue";
+  import JackpotHistory from "@/views/JackpotHistory.vue";
   export default {
+    components: {
+      JackpotInventory,
+      JackpotHistory
+  },
     props: {
       amount: {
         type: Number,
         default: 0
       }
     },
+    data() {
+    return {
+      isPopupVisible: false,
+      isHistoryVisible: false,
+    };
+  },
     methods: {
       handleTransaction() {
         this.$emit('handleTransaction');
-      }
+      },
+      openInventory() {
+      this.isPopupVisible = true;
+    },
+    closePopup() {
+      this.isPopupVisible = false;
+    },
+    openHistory() {
+      this.isHistoryVisible = true;
+    },
+    closeHistoryPopup() {
+      this.isHistoryVisible = false;
+    },
     }
   }
   </script>

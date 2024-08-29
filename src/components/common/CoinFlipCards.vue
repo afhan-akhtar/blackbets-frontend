@@ -39,12 +39,12 @@
                 </div>
                 
                 <div class="card-buttons flex justify-between">
-                  <button type="button" class="join-btn bg-green-500 text-white px-4 py-2 rounded-xl bg-[#2BAC00]">
+                  <button @click.prevent="openCoin" type="button" class="join-btn bg-green-500 text-white px-4 py-2 rounded-xl bg-[#2BAC00]">
                     Join
                   </button>
-                  <router-link to="/coinflip/view" class="view-btn bg-blue-500 text-white px-4 py-2 rounded-xl bg-[#D33244]">
+                  <button type="button"  @click.prevent="openInventory" class="view-btn bg-blue-500 text-white px-4 py-2 rounded-xl bg-[#D33244]">
                     View
-                  </router-link>
+                  </button >
                 </div>
               </div>
             </div>
@@ -96,9 +96,9 @@
                     
                     <div class="card-buttons flex justify-center">
               
-                      <router-link to="/coinflip/view" class="view-btn bg-blue-500 text-white px-4 py-2 rounded-xl bg-[#D33244]">
+                      <button type="button"  @click.prevent="openInventory" class="view-btn bg-blue-500 text-white px-4 py-2 rounded-xl bg-[#D33244]">
                         View
-                      </router-link>
+                      </button >
                     </div>
                   </div>
                 </div>
@@ -141,23 +141,38 @@
         </div>
         
         <div class="card-buttons flex justify-center">
-          <router-link to="/coinflip/view" class="view-btn bg-blue-500 text-white px-4 py-2 rounded-xl bg-[#D33244]">
+          <button type="button"  @click.prevent="openInventory" class="view-btn bg-blue-500 text-white px-4 py-2 rounded-xl bg-[#D33244]">
             View
-          </router-link>
+          </button >
         </div>
+           <!-- Inventory Popup -->
+    <CoinflipInventory :isVisible="isPopupVisible" @close="closePopup" />
+    <ViewCoinflip :isCoinVisible="isCoinVisible" @close="closeCoinPopup" />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-
+  import CoinflipInventory from "@/views/CoinflipInventory.vue";
+  import ViewCoinflip from "@/views/ViewCoinflip.vue";
 import group13 from '@/assets/Group 13.svg';
 import group14 from '@/assets/Group 14.svg';
 
 
 export default {
-  
+  data() {
+    return {
+      isPopupVisible: false,
+      isCoinVisible: false,
+      
+    };
+  },
+  components: {
+      CoinflipInventory,
+      ViewCoinflip
+      
+  },
   methods: {
    
     createGame() {
@@ -202,7 +217,18 @@ export default {
       }
       return group14;
     },
-  
+    openInventory() {
+      this.isPopupVisible = true;
+    },
+    closePopup() {
+      this.isPopupVisible = false;
+    },
+    openCoin() {
+      this.isCoinVisible = true;
+    },
+    closeCoinPopup() {
+      this.isCoinVisible = false;
+    },
   },
 };
 </script>

@@ -11,11 +11,11 @@ import ProvablyFair from '../views/ProvablyFair.vue'
 import Faqs from '../views/Faqs.vue'
 import TermsOfService from '../views/TermsOfService.vue'
 import JackpotDeposit from '../views/JackpotDeposit.vue'
-import JackpotHistory from '../views/JackpotHistory.vue'
-import JackpotInventory from '../views/JackpotInventory.vue'
+
+
 import ProfileSettings from '../views/ProfileSettings.vue'
-import ViewCoinflip from '../views/ViewCoinflip.vue'
-import CoinflipInventory from '../views/CoinflipInventory.vue'
+
+
 import Affiliate from '../views/Affiliate.vue'
 import AffiliateWithdraw from '../views/AffiliateWithdraw.vue'
 import PromoCode from '../views/PromoCode.vue'
@@ -70,27 +70,14 @@ const router = createRouter({
       name: 'JackpotDeposit',
       component: JackpotDeposit
     },
-    {
-      path: '/jackpot/history',
-      name: 'JackpotHistory',
-      component: JackpotHistory
-    },
-    {
-      path: '/jackpot/inventory',
-      name: 'JackpotInventory',
-      component: JackpotInventory
-    },
+    
     {
       path: '/terms',
       name: 'TermsOfService',
       component: TermsOfService
     },
     
-    {
-      path: '/coinflip/view',
-      name: 'ViewCoinflip',
-      component: ViewCoinflip
-    },
+   
     {
       path: '/provably-fair',
       name: 'ProvablyFair',
@@ -112,11 +99,7 @@ const router = createRouter({
       name: 'ProfileSettings',
       component: ProfileSettings
     },
-    {
-      path: '/coinflip/inventory',
-      name: 'CoinflipInventory',
-      component: CoinflipInventory
-    },
+  
     {
       path: '/affiliate/withdraw',
       name: 'AffiliateWithdraw',

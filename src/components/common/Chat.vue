@@ -19,7 +19,7 @@
       
       </div> -->
     </div>
-  <div v-if="isChatVisible"  class="container mx-auto bg-secondaryBlack primaryStroke p-2 rounded-xl shadow-xl">
+  <div v-if="isChatVisible"  class="w-[350px] mx-auto bg-secondaryBlack primaryStroke p-2 rounded-xl shadow-xl">
   
 
     <!-- Top Red Section with OnlineAndSocial Component -->
@@ -32,7 +32,7 @@
 
     <!-- Blue Sections with ChatMessage Components -->
     <div class="flex-1 overflow-y-auto pt-2">
-      <div class="bg-blue-500 flex justify-center items-center p-0">
+      <div class="bg-blue-500 flex justify-center items-center p-2">
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
@@ -40,7 +40,7 @@
           message="Wow this site is amazing"
         />
       </div>
-      <div class="bg-blue-500 flex justify-center items-center p-4">
+      <div class="bg-blue-500 flex justify-center items-center p-2">
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
@@ -48,7 +48,7 @@
           message="Wow this site is amazing"
         />
       </div>
-      <div class="bg-blue-500 flex justify-center items-center p-4">
+      <div class="bg-blue-500 flex justify-center items-center p-2">
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
@@ -56,7 +56,7 @@
           message="Wow this site is amazing"
         />
       </div>
-      <div class="bg-blue-500 flex justify-center items-center p-4">
+      <div class="bg-blue-500 flex justify-center items-center p-2">
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
@@ -64,7 +64,7 @@
           message="Wow this site is amazing"
         />
       </div>
-      <div class="bg-blue-500 flex justify-center items-center p-4">
+      <div class="bg-blue-500 flex justify-center items-center p-2">
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
@@ -72,7 +72,7 @@
           message="Wow this site is amazing"
         />
       </div>
-      <div class="bg-blue-500 flex justify-center items-center p-4">
+      <div class="bg-blue-500 flex justify-center items-center p-2">
         <ChatMessage
           avatarUrl="https://avatars.steamstatic.com/edd90c6af7248e29e73215d46da9274c78b6f9ab_full.jpg"
           username="Zaqk187420"
@@ -84,7 +84,7 @@
      
     </div>
     <!-- Bottom Black Section with SendMessage Component -->
-    <div class="bg-black flex justify-center  items-center p-4">
+    <div class="bg-black flex justify-center  items-center p-2">
       <SendMessage />
     </div>
   </div>

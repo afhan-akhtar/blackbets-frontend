@@ -1,6 +1,6 @@
 <template>
     <div v-for="(item, index) in items" :key="index" class="flex mt-8">
-      <div class="w-1/2 px-16 pb-0 pt-0 mb-4" v-for="side in [0, 1]" :key="side">
+      <div class="w-1/2 px-3 pb-0 pt-0 mb-4" v-for="side in [0, 1]" :key="side">
         <router-link to="/coinflip/inventory" class="text-white card card-link rounded-xl shadow-xl flex justify-around items-center bg-[#171717] py-4">
           <div class="flex items-center justify-start">
             <img :src="item.imageSrc" alt="" />

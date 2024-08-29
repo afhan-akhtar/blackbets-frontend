@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center bg-gray-900 rounded-lg space-x-2">
     <div
-      class="flex items-center space-x-0 bg-gray-800 p-4 rounded-md shadow-xl primaryStroke hover:bg-gray-700 transition"
+      class="flex items-center space-x-0 bg-gray-800 p-4 rounded-md shadow-xl primaryStroke hover:bg-gray-700 transition w-[205px]"
     >
       <div class="flex items-center space-x-2 px-2">
         <img src="@/assets/online-icon.svg" alt="Online Icon" class="w-6 h-6" />

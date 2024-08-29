@@ -10,7 +10,7 @@
           'bg-gray-800 text-white '
         ]"
       >
-        <div class="p-6" >
+      <div class="py-6 px-5" >
           <!-- <h2 class="text-xl font-semibold">Chat</h2> -->
           <!-- Chat content goes here -->
           <Chat />
